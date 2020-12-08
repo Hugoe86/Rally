@@ -1,0 +1,632 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="web_trazabilidad.Paginas.Paginas_Generales.MasterPage" %>
+
+<%@ Import Namespace="web_trazabilidad.Models.Ayudante" %>
+<%@ Register Src="~/Paginas/Paginas_Generales/Menu_Principal.ascx" TagPrefix="uc1" TagName="Menu_Principal" %>
+<%@ Register Src="~/Paginas/Paginas_Generales/Breadcrumb.ascx" TagPrefix="uc1" TagName="Breadcrumb" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"  ng-app="TrazabilidadModule"  lang="es">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="../../Recursos/img/favicon.ico" />
+    <meta http-equiv="Content-Language" content="es" />
+
+    <link href="../../Recursos/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-date/datepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../Recursos/xenon/css/fonts/linecons/css/linecons.css" />
+    <link href="../../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../Recursos/font-awesome/css/font-awesome-animation.min.css" rel="stylesheet" />
+    
+
+    <link href="../../Recursos/font-indie/css/indie.css" rel="stylesheet" />
+    <link href="../../Recursos/font-roboto/css/roboto.css" rel="stylesheet" />
+    <link href="../../Recursos/lightbox/ekko-lightbox.min.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-core.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-forms.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-components.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-skins.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/custom.css" rel="stylesheet" />
+    <link href="../../Recursos/nprogress/nprogress.css" rel="stylesheet" />
+    <link href="../../Recursos/fontello/fontello.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-combo/select2.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-combo/select2-custom.css" rel="stylesheet" />
+    <link href="../../Recursos/estilos/breadcrumb.css" rel="stylesheet" />
+
+    <script src="../../Recursos/jquery/jquery-1.12.3.min.js"></script>
+    <script src="../../Recursos/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Recursos/jquery-ui/jquery-ui.min.js"></script>
+    <script src="../../Recursos/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Recursos/bootstrap-date/bootstrap-datepicker.js"></script>
+    <script src="../../Recursos/bootstrap-date/bootstrap-datepicker.es.js"></script>
+    <script src="../../Recursos/respond.js"></script>
+    <script src="../../Recursos/TweenMax.min.js"></script>
+    <script src="../../Recursos/resizeable.js"></script>
+    <script src="../../Recursos/joinable.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-api.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-toggles.js"></script>
+    <script src="../../Recursos/lightbox/ekko-lightbox.min.js"></script>
+    <script src="../../Recursos/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-widgets.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-custom.js"></script>
+    <script src="../../Recursos/toastr/toastr.min.js"></script>
+    <script src="../../Recursos/bootstrap-box/dialogs.js"></script>
+    <script src="../../Recursos/bootstrap-box/bootbox.js"></script>
+    <script src="../../Recursos/plugins/jquery.qtip-1.0.0-rc3.min.js"></script>
+    <script src="../../Recursos/plugins/jquery_jclock.js"></script>
+    <script src="../../Recursos/plugins/jquery.cookie.js"></script>
+    <script src="../../Recursos/plugins/date.js"></script>
+    <script src="../../Recursos/plugins/es-MX.js"></script>
+
+    <script src="../../Recursos/jquery-lang/js.cookie.js"></script>
+    <script src="../../Recursos/jquery-lang/jquery-lang.js" charset="utf-8"></script>
+    <%--    <script src="../../Recursos/jquery-lang/langpack/nonDynamic.js"></script>--%>
+
+    <script src="../../Recursos/nprogress/nprogress.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Master_Page.js"></script>
+    <script src="../../Recursos/plugins/bootstrap-session-timeout.min.js"></script>
+    <script src="../../Recursos/plugins/jquery.inputmask.bundle.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Ope_Notificaciones.js"></script>
+    <script src="../../Recursos/loadingoverlay/loadingoverlay.min.js"></script>
+    <script src="../../Recursos/loadingoverlay/loadingoverlay_progress.min.js"></script>
+    <script src="../../Recursos/bootstrap-combo/select2.js"></script>
+
+    <link href="../../Recursos/estilos/demo_form.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-table/bootstrap-table.min.css" rel="stylesheet" />
+    <script src="../../Recursos/bootstrap-table-current/bootstrap-table.js"></script>
+    <script src="../../Recursos/bootstrap-table-current/locale/bootstrap-table-es-MX.js"></script>
+
+    <!-- ANGULAR JS -->
+    <script src="../../Recursos/angular/angular.min.js"></script>
+    <script src="../../Recursos/angular/angular-animate.min.js"></script>
+    <script src="../../Recursos/angular/angular-sanitize.min.js"></script>
+    <script src="../../Recursos/angular/angular-messages.min.js"></script>
+    <link href="../../Recursos/angular/growl/angular-growl.min.css" rel="stylesheet" />
+    <script src="../../Recursos/angular/growl/angular-growl.min.js"></script>
+    <script src="../../Recursos/angular/file-upload/ng-file-upload-shim.min.js"></script>
+    <script src="../../Recursos/angular/file-upload/ng-file-upload.min.js"></script>
+    <script src="../../Recursos/angular/isotope/jquery.isotope.min.js"></script>
+    <script src="../../Recursos/angular/isotope/angular-isotope.min.js"></script>
+    <link href="../../Recursos/angular/isotope/isotope.css" rel="stylesheet" />
+    <link href="../../Recursos/angular/ui-select/select.min.css" rel="stylesheet" />
+    <script src="../../Recursos/angular/ui-select/select.min.js"></script>
+    <link href="../../Recursos/angular/tree/angular-ui-tree.css" rel="stylesheet" />
+    <script src="../../Recursos/angular/tree/angular-ui-tree.js"></script>
+    <script src="../../Recursos/angular/ui-bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <link href="../../Recursos/angular/angular-bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="../../Recursos/angular/angular-bootstrap-datetimepicker/css/bootstrap-datetimepicker-standalone.css" rel="stylesheet" />
+    <script src="../../Recursos/angular/angular-bootstrap-datetimepicker/js/moment.min.js"></script>
+    <script src="../../Recursos/angular/angular-bootstrap-datetimepicker/js/moment-with-locales.min.js"></script>
+    <script src="../../Recursos/angular/angular-bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="../../Recursos/angular/angular-bootstrap-datetimepicker/js/angular-bootstrap-datetimepicker-directive.min.js"></script>
+    <script src="../../Recursos/angular/select2/select.js"></script>
+    <link href="../../Recursos/angular/select2/select.css" rel="stylesheet" />
+    <script src="../../Recursos/angular/adapt-strap/adapt-strap-custom.js"></script>
+    <script src="../../Recursos/angular/adapt-strap/adapt-strap-custom.tpl.js"></script>
+    <link href="../../Recursos/angular/adapt-strap/adapt-strap.min.css" rel="stylesheet" />
+
+    <script src="../../Recursos/plugins/parsley.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Cambio_Password.js"></script>
+   <script src="../../Recursos/angular/app/modules/TrazabilidadModule.js"></script>
+    <script src="../../Recursos/angular/app/controllers/TrazabilidadController.js"></script>
+
+
+    <link href="../../Recursos/jquery-datatables/datatables.min.css" rel="stylesheet" />
+    <script src="../../Recursos/jquery-datatables/datatables.min.js"></script>
+    <script src="../../Recursos/jquery-notification/jquery-notification.js"></script>
+
+
+    <style>
+        .tag {
+            cursor: pointer;
+            border: 1px solid gray;
+            border-radius: 3px;
+            padding: 3px;
+            margin: 3px;
+            display: inline-block;
+        }
+
+            .tag:hover {
+                background-color: #2200B8;
+                color: white;
+                border-color: #2200B8;
+            }
+    </style>
+
+    <script type="text/javascript">
+        var DateTimePickerConfig = {
+            locale: 'es',
+            format: 'DD/MM/YYYY',
+            ignoreReadonly: true,
+            showTodayButton: true,
+            showClear: true,
+            showClose: true,
+            viewMode: 'days',
+            tooltips: {
+                today: 'Hoy',
+                clear: 'Limpiar',
+                close: 'Cerrar',
+                selectMonth: 'Seleccione Mes',
+                prevMonth: 'Mes Anterior',
+                nextMonth: 'Siguiente Mes',
+                selectYear: 'Seleccione Año',
+                prevYear: 'Año Anterior',
+                nextYear: 'Siguiente Año',
+                selectDecade: 'Seleccione Decada',
+                prevDecade: 'Decada Anterior',
+                nextDecade: 'Siguiente Decada',
+                prevCentury: 'Anterior Siglo',
+                nextCentury: 'Siglo Siguiente'
+            }
+        };
+    </script>
+
+    <title>Rally</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../../Recursos/estilos/css_master.css" rel="stylesheet" />
+</head>
+<body style="padding-right: 0px !important;" ng-controller="TrazabilidadController" id="Trazabilidad">
+    <form id="form1" runat="server">
+        <div>
+            <!-- Opcional -->
+            <div class="settings-pane" id="pane">
+                <a href="#" data-toggle="settings-pane" data-animete="true" id="a">x</a>
+                <div class="settings-pane-inner">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="user-info">
+                                <div class="user-details" style="text-align: center !important;">
+                                    <i class="fa-user-circle-o fa-4x" style="font-size: 92px;"></i>
+                                    <h3><%=Cls_Sesiones.Usuario %><span class="user-status is-online"></span></h3>
+                                    <p class="user-title"><%=Cls_Sesiones.Correo_Usuario %></p>
+                                    <a href="#" data-toggle="settings-pane" data-animete="true" class="btn btn-success btn-xs " id="btn_cambiar_contraseña" title="Cambiar Contraseña" style="margin-top: 15px"><span>Cambiar Contraseña</span></a>
+                                    <%-- <div class="user-links">
+                                        <a href="../Paginas_Generales/Frm_Apl_Cambio_Password.aspx" class="btn btn-success">Cambiar Contraseña</a>
+                                    </div>--%>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-1 v-divider"></div>
+
+                        <div class="col-md-8 link-blocks-env">
+
+                            <div class="row">
+
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-6 col-md-offset-4 text-left">
+                                                    <span style="font-size: large;">Empresa.</span>
+                                                    <br />
+                                                    <i class="fa-angle-right"></i>
+                                                    <%=Cls_Sesiones.Empresa_Nombre %>
+                                                </div>
+                                            </div>
+
+                                            <div class="row" style="margin-top: 5px;">
+                                                <div class="col-md-6" style="text-align: right;">
+                                                    <i class="fa fa-building" style="font-size: 92px;"></i>
+                                                </div>
+                                                <div class="col-md-6" style="text-align: left;">
+                                                    <ul class="list-unstyled">
+                                                        <li><i class="fa fa-phone"></i>
+                                                            <label>Telefono. </label>
+                                                            <br>
+                                                            <label><%=Cls_Sesiones.Empresa_Telefono %></label>
+                                                        </li>
+                                                        <li><i class="fa fa-envelope"></i>
+                                                            <label>Email. </label>
+                                                            <br>
+                                                            <label><%=Cls_Sesiones.Empresa_Email %></label>
+                                                        </li>
+                                                        <li><i class="fa fa-map-marker"></i>
+                                                            <label>Dirección. </label>
+                                                            <br>
+                                                            <label><%=Cls_Sesiones.Empresa_Direccion %></label>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-1 v-divider"></div>
+
+                                <div class="col-md-5">
+                                    <div class="row">
+                                        <div class="col-md-12">
+
+                                            <div class="row">
+                                                <div class="col-md-6 col-md-offset-3 text-left">
+                                                    <span style="font-size: large;">Sucursal.</span>
+                                                    <br>
+                                                    <i class="fa-angle-right"></i>
+                                                    <%=Cls_Sesiones.Sucursal_Nombre %>
+                                                </div>
+                                            </div>
+
+                                            <div class="row" style="margin-top: 5px;">
+                                                <div class="col-md-6" style="text-align: right;">
+                                                    <i class="fa fa-industry" style="font-size: 92px;"></i>
+                                                </div>
+                                                <div class="col-md-6" style="text-align: left;">
+                                                    <ul class="list-unstyled">
+                                                        <li><i class="fa fa-phone"></i>
+                                                            <label>Telefono.</label>
+                                                            <br>
+                                                            <label><%=Cls_Sesiones.Sucursal_Telefono %></label>
+                                                        </li>
+                                                        <li><i class="fa fa-envelope"></i>
+                                                            <label>Email. </label>
+                                                            <br>
+                                                            <label><%=Cls_Sesiones.Sucursal_Email %>  </label>
+                                                        </li>
+                                                        <li><i class="fa fa-map-marker"></i>
+                                                            <label>Dirección. </label>
+                                                            <br>
+                                                            <%=Cls_Sesiones.Sucursal_Direccion %>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Opcional -->
+
+            <div class="page-container">
+
+                <div class="sidebar-menu toggle-others collapsed fixed">
+
+                    <div class="sidebar-menu-inner ps-container">
+
+                        <header class="logo-env">
+                            <!-- logo -->
+                            <div class="logo">
+                                <a href="#" class="logo-expanded">
+                                    <img src="../../Recursos/img/world_72px.png" />&nbsp;
+                                    <%--<i class="fa fa-gears" style="font-size: 40px !important; color: white !important;"></i>&nbsp;--%>
+                                    <span class="text-white text-bold" style="font-size: x-large; word-spacing: 1px;">Rally</span>
+                                </a>
+                                <a href="escritorio.html" class="logo-collapsed" data-toggle="settings-pane" data-animate="true">
+                                    <%--<i class="fontello-icon-chart" style="font-size: 40px !important; color: white !important;"></i>--%>
+                                    <img src="../../Recursos/img/char.png" style="width: 59px; height: 59px;" />
+                                </a>
+                            </div>
+                            <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                            <div class="mobile-menu-toggle visible-xs">
+
+                                <a href="#" id="btn_salir_sistema_mobile">
+                                    <i class="fa fa-power-off"></i>
+                                </a>
+                                <a href="#" data-toggle="mobile-menu">
+                                    <i class="fa fa-bars"></i>
+                                </a>
+                            </div>
+                        </header>
+
+                        <uc1:Menu_Principal runat="server" ID="Menu_Principal" />
+                        <!--fin menu-->
+                    </div>
+                </div>
+
+                <div class="main-content">
+                    <!-- User Info, Notifications and Menu Bar -->
+                    <nav class="navbar user-info-navbar" role="navigation">
+
+                        <!-- Left links for user info navbar -->
+                        <ul class="user-info-menu left-links list-inline list-unstyled">
+
+                            <%--                    <li class="dropdown hover-line">
+                                <a href="#" data-toggle="dropdown">
+                                    <i class="fa-envelope-o"></i>
+                                    <span class="badge badge-green">17</span>
+                                </a>
+
+                                <ul class="dropdown-menu messages">
+                                    <li>
+
+                                        <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+
+                                            <li class="active">
+                                                <!-- "active" class means message is unread -->
+                                                <a href="#">
+                                                    <span class="line">
+                                                        <strong>Cuautemoc Gonzalez</strong>
+                                                        <span class="light small">- ayer</span>
+                                                    </span>
+
+                                                    <span class="line desc small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li class="active">
+                                                <a href="#">
+                                                    <span class="line">
+                                                        <strong>Juan Carlos Zuñiga</strong>
+                                                        <span class="light small">- hace 2 días</span>
+                                                    </span>
+
+                                                    <span class="line desc small">Fusce volutpat massa at tellus hendrerit, vitae auctor nisi dictum.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <span class="line">Patricia Patraca
+                                                    <span class="light small">- 20 mayo 2015</span>
+                                                    </span>
+
+                                                    <span class="line desc small">Ut gravida ex ex, non dictum enim maximus in. Morbi bibendum suscipit dui, in egestas orci efficitur in.
+                                                    </span>
+                                                </a>
+                                            </li>
+
+                                            <li>
+                                                <a href="#">
+                                                    <span class="line">Iván Pereira
+                                                    <span class="light small">- 16 mayo 2014</span>
+                                                    </span>
+
+                                                    <span class="line desc small">On so attention necessary at by provision otherwise existence direction.
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+                                    <li class="external">
+                                        <a href="blank-sidebar.html">
+                                            <span>Todos los Mensajes</span>
+                                            <i class="fa-link-ext"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>--%>
+
+                            <li class="dropdown hover-line">
+                                <a id="Ref_Notif" href="#" data-toggle="dropdown">
+                                    <i class="fa-bell-o"></i>
+                                    <span class="badge badge-purple" id="notif_count">0</span>
+                                </a>
+
+                                <ul class="dropdown-menu notifications">
+                                    <%-- <li class="top">
+                                        <p class="small">
+                                            <a href="#" class="pull-right"></a>
+                                            You have <strong>3</strong> new notifications.
+                                        </p>
+                                    </li>--%>
+
+                                    <li id="dwn_lst_notif"></li>
+
+                                    <%--                <li class="external">
+                                        <a href="#">
+                                            <span>View all notifications</span>
+                                            <i class="fa-link-ext"></i>
+                                        </a>
+                                    </li>--%>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- Added in v1.2 -->
+                        <ul class="user-info-menu left-links list-inline list-unstyled" style="display: none;">
+                            <li class="dropdown hover-line language-switcher">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="../../Recursos/img/mx.png" />
+                                    Espa&ntilde;ol
+                                </a>
+
+                                <ul class="dropdown-menu languages">
+                                    <li>
+                                        <a href="#" id="option_en">
+                                            <img src="../../Recursos/img/us.png" />
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="option_es">
+                                            <img src="../../Recursos/img/mx.png" />
+                                            Espa&ntilde;ol
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#" id="option_zh">
+                                            <img src="../../Recursos/img/flag-zh.png" />
+                                            简体中文
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="user-info-menu left- list-inline list-unstyled">
+                            <li class="dropdown hover-line">
+                                <div class="col-md-12" style="margin-top: 25px;">
+                                    <uc1:Breadcrumb runat="server" ID="Breadcrumb" />
+                                </div>
+                            </li>
+                            <li></li>
+                        </ul>
+
+
+                        <!-- Right links for user info navbar -->
+                        <ul class="user-info-menu right-links list-inline list-unstyled">
+
+                            <li class="search-form">
+                                <div class="form">
+                                    <input type="text" name="s" class="form-control search-field" placeholder="Buscar menú..." id="menuFilter"
+                                        style="border-radius: 8px !important; max-height: 32px !important;" />
+
+                                    <button type="button" class="btn btn-link" style="padding: 0px 7px 0px 0px;" id="btn_busqueda_menu">
+                                        <i class="linecons-search"></i>
+                                    </button>
+                                </div>
+                            </li>
+
+                            <li class="dropdown user-profile">
+                                <a href="#" data-toggle="dropdown">
+                                    <img id="img_perfil_master" src="../../Recursos/img/avatar-f.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+                                    <span id="lbl_nombre_usuario"><%=Cls_Sesiones.Usuario %></span>
+                                    <i class="fa-angle-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu user-profile-menu list-unstyled">
+                                    <%--<li>
+                                    <a href="#configuracion">
+                                        <i class="fa-wrench"></i>
+                                        Configuración
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Operacion/Frm_Ope_Ov_Perfil.aspx">
+                                        <i class="fa-user"></i>
+                                        Mi Perfil
+                                    </a>
+                                </li>--%>
+
+                                    <li>
+                                        <a href="#ayuda">
+                                            <i class="fa fa-info-circle"></i>
+                                            Ayuda
+                                        </a>
+                                    </li>
+                                    <li class="last">
+                                        <a href="#" id="btn_salir_sistema">
+                                            <i class="fa fa-sign-out"></i>
+                                            Salir
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </nav>
+                    <div class="row">
+                        <div class="col-md-12">
+                        </div>
+                    </div>
+                    <div id="Contenido_Pagina">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <!-- Main Footer -->
+                    <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
+                    <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
+                    <!-- Or class "fixed" to  always fix the footer to the end of page -->
+                    <footer class="main-footer fixed footer-type-1">
+                        <div class="footer-inner">
+
+                            <!-- Add your copyright text here -->
+                            <div class="footer-text">
+                                &copy; <%=DateTime.Now.Year %>
+                                <span><%=Cls_Sesiones.Empresa_Nombre %>
+                                </span>
+                            </div>
+
+                            <div id="div_master_mensaje_aviso" style="display: none" align="center" class="alert alert-success aviso">
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close" title="close">×</a>
+                            </div>
+
+                            <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+                            <div class="go-up">
+                                <i class="fontello-icon-clock-4" style="color: rgba(0, 80, 151, 1); font-size: 22px !important;"></i>&nbsp;
+                            <span class="jclock" style="background-color: transparent !important; color: #fff !important;"></span>
+                            </div>
+
+                        </div>
+
+                    </footer>
+                </div>
+
+            </div>
+
+            <div class="page-loading-overlay">
+                <div class="loader-2"></div>
+            </div>
+
+        </div>
+    </form>
+    <div id="contenedor" class="login-container">
+        <div class="row">
+            <div class="col-sm-7">
+                <form role="form" id="lockscreen" class="lockcreen-form fade-in-effect">
+                    <div class="user-thumb">
+                        <a href="#">
+                            <img src="../../Recursos/xenon/images/user-5.png" class="img-responsive img-circle" />
+                        </a>
+                    </div>
+                    <div class="form-group">
+                        <h3>Bienvenido, ¡<%= Cls_Sesiones.Usuario %>!
+                        </h3>
+                        <p>
+                            Ingresa tu contraseña para desbloquear el sistema.
+                        </p>
+                        <div class="input-group">
+                            <input type="password" class="form-control input-dark" name="passwd" id="passwd" placeholder="Password" style="margin: 0px !important;" />
+                            <span class="input-group-btn">
+                                <button id="access" type="submit" class="btn btn-blue">
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-search-menu">
+        <%=Menu_Principal.Mostrar_Menu_Secundario_Sistema() %>
+    </div>
+
+
+<%--    <producto-modal></producto-modal>
+    <proveedor-modal></proveedor-modal>
+    <cliente-modal></cliente-modal>
+    <detalle-producto-modal></detalle-producto-modal>
+    <mensaje-modal></mensaje-modal>
+    <loading-modal></loading-modal>
+
+    <div growl></div>--%>
+
+    <!-- ANGULAR JS - APP -->
+    <script type="text/javascript">
+      <%--  var UrlApp = '<%=UrlApp%>';--%>
+        var EmpresaId = '<%=EmpresaId%>';
+        var SucursalId = '<%=SucursalId%>';
+        var Usuario = '<%=Usuario%>';
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <div id="divModalCambioContrasena"></div>
+</body>
+</html>

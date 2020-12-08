@@ -1,0 +1,209 @@
+﻿
+
+<div style="width:100% !important;" class="container">
+    <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-7">
+
+        </div>
+        <div class="col-md-5" style="text-align:right">
+            <button id="btn_guardar" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+            <button id="btn_cancelar" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+            <button id="btn_regresar_principal" class="btn btn-info" title="Regregar"><i class="fa fa-reply"></i>&nbsp;Regresar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa fa-archive"></span>&nbsp;Datos del evento
+                    </h3>
+                  
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_evento_id" type="hidden" />
+                            <input id="txt_estatus" type="hidden" />
+
+                            <label class="fuente_lbl_controles">(*) Clave del evento</label>
+                            <input id="txt_clave_evento" type="text" class="form-control" placeholder="Clave del evento" style="margin-top:0px" maxlength="20" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Nombre del evento</label>
+
+                            <input id="txt_nombre_evento" type="text" class="form-control" placeholder="Nombre" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Estatus</label>
+                            <select id="cmb_estatus" style="width:100%" class="form-control"></select>
+                        </div>
+
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha inicio</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_inicio_evento">
+                                <input type="text" id="txt_fecha_inicio_evento"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha fin</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_fin_evento">
+                                <input type="text" id="txt_fecha_fin_evento"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha de salida</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_salida_evento">
+                                <input type="text" id="txt_fecha_salida_evento"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Recorrido completo(Km)</label>
+                            <input id="txt_recorrido_completo" type="text" class="form-control" placeholder="Recorrido" style="margin-top:0px" maxlength="25" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Punto de salida</label>
+                            <input id="txt_punto_salida_evento" type="text" class="form-control" placeholder="Punto de salida" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Punto de meta</label>
+                            <input id="txt_punto_meta_evento" type="text" class="form-control" placeholder="Punto de meta" style="margin-top:0px" maxlength="100" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Hora salida</label>
+
+                            <div class="input-group date" id="dtp_txt_hora_salida_evento">
+                                <input type="text" id="txt_hora_salida_evento" data-format="hh:mm:ss"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Comentarios</label>
+                            <input id="txt_comentarios_evento" type="text" class="form-control" placeholder="Comentarios" style="margin-top:0px" maxlength="255" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles bg-info">(*) Segundos de Intervalo entre carros</label>
+
+                            <input type="text" id="txt_intervalo_evento"
+                                   class="form-control" style="margin: 0px;" placeholder="total de segundos" />
+
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+
+                    
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="glyphicon glyphicon-link"></span> &nbsp;Redes sociales
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Nombre</label>
+                            <input id="txt_nombre_link" type="text" class="form-control" placeholder="Nombre" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Link</label>
+                            <input id="txt_ruta_link" type="text" class="form-control" placeholder="Link" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <button id="btn_agregar_link" class="btn btn-blue btn-block"
+                                    title="Agregar">
+                                <i class="fa fa-check"></i><span id="spn_agregar">&nbsp;Agregar</span>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <table id="tbl_redes_sociales" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="row" style="padding-top:10px;display:none;">
+                        <table id="tbl_redes_sociales_eliminar" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+

@@ -1,0 +1,402 @@
+﻿(function ($) {
+    'use strict';
+
+    $.notification = function (options) {
+        var usuarios = [];
+        var usuariosSelected = [];
+
+        try {
+            if (options.show === true || options === undefined) {
+                var modal =
+                    '<div id="div-modal-notification" class="modal fade" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">' +
+                    '<div class="modal-dialog modal-lg" role="document">' +
+                    '<div class="modal-content">' +
+
+                    '<div class="modal-header">' +
+                    '<button type="button" id="btn-close-modal-notification" class="close" aria-label="Close">' +
+                    '<span class="fa fa-times"></span>' +
+                    '</button>' +
+                    '<h4 class="modal-title" style="padding-bottom: 10px !important;">' +
+                    '<span class="' + options.icon + '" style="font-size: 12pt;"></span>&nbsp;' +
+                    '<span>' + options.title + '</span>' +
+                    '</h4>' +
+                    '</div>' + //end modal-header
+                    '<div class="modal-body">' +
+
+                    '<div class="row">' +
+                    '<div class="col-md-12">' +
+                    '<div class="form-group">' +
+                    '<label class="control-label">Tipo de envío</label>&nbsp;' +
+                    '<div class="form-inline">' +
+                    '<label class="radio-inline"><input type="radio" name="rdo-modal-notification" value="MODULO" />Módulo</label>' +
+                    '<label class="radio-inline"><input type="radio" name="rdo-modal-notification" value="USUARIO" />Usuarios</label>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    '<div class="row" id="div-tipo-notificacion" style="margin-top:10px;">' +
+                    '<div class="col-md-12">' +
+                    '<div class="form-group">' +
+                    '<label class="control-label">Tipo de notificación</label>' +
+                    '<select class="form-control js-states" id="cbo-tipo-notificacion"></select>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    '<div class="row" id="div-select-usuarios" style="margin-top:10px;">' +
+                    '<div class="col-md-12">' +
+                    '<div class="form-group">' +
+                    '<label class="control-label">Usuarios</label>' +
+                    '<select class="form-control js-states" id="cbo-usuarios"></select>' +
+                    '<div class="row">' +
+                    '<div class="col-md-12">' +
+                    '<div id="div-tags-usuarios" class="form-inline inline-group"></div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    '<div class="row" id="div-usuarios-modulo" style="margin-top: 10px;">' +
+                    '<div class="col-md-12 pull-right text-right">' +
+                    '<button class="btn btn-info" id="btn-reiniciar-usuarios-modulo"><span class="fa fa-refresh"></span>&nbsp;Reiniciar</button>' +
+                    '</div>' +
+                    '<div class="col-md-12">' +
+                    '<div class="table-responsive" style="overflow:hidden;border:none;margin-top:10px;">' +
+                    '<table class="table table-bordered table-hover stripe" id="tbl-usuarios" style="width:100%;"></table>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+
+                    '</div>' + //end modal-body
+                    '<div class="modal-footer">' +
+                    '<div class="row">' +
+                    '<div class="col-md-12 pull-right text-right">' +
+                    '<button type="button" id="btn-cancel-modal-notification" class="btn btn-danger"><span class="' + options.iconCancel + '"></span>&nbsp;' + options.textCancel + '</button>' +
+                    '<button type="button" id="btn-success-modal-notification" class="btn btn-success" disabled="disabled"><span class="' + options.iconSuccess + '"></span>&nbsp;' + options.textSuccess + '</button>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>' + //end modal-footer
+
+                    '</div>' +
+                    '</div>' +
+                    '</div>' +
+                    '</div>';
+
+                $(modal).appendTo('body');
+                $('#div-modal-notification').modal('show', { backdrop: 'static', keyboard: false });
+                $('#div-tipo-notificacion').hide();
+                $('#div-usuarios-modulo').hide();
+                $('#div-select-usuarios').hide();
+            } else if (options.show === false) {
+                __closeModalNotification();
+            }
+        } catch (ex) {
+            if (options.onError !== undefined) {
+                if (typeof options.onError === "function") {
+                    options.onError('Ha ocurrido un error.');
+                }
+            }
+        }
+
+        $('#btn-close-modal-notification').on('click', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            __closeModalNotification();
+        });
+
+        $('#btn-cancel-modal-notification').on('click', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            __closeModalNotification();
+        });
+
+        $('#btn-success-modal-notification').on('click', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+
+            if (options.onSuccess !== undefined) {
+                if (typeof options.onSuccess === "function") {
+                    var notifications = [];
+                    for (var i = 0; i < usuariosSelected.length; i++) {
+                        notifications.push({
+                            Empresa_ID: usuariosSelected[i].Empresa_ID,
+                            Sucursal_ID: usuariosSelected[i].Sucursal_ID,
+                            Usuario_ID: usuariosSelected[i].Usuario_ID,
+                            Usuario: usuariosSelected[i].Usuario,
+                            Email: usuariosSelected[i].Email,
+                            Nombre: usuariosSelected[i].Nombre
+                        });
+                    }
+
+                    options.onSuccess(notifications);
+                }
+            }
+
+            __closeModalNotification();
+        });
+
+        $("input[type='radio'][name='rdo-modal-notification']").on('change', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var tipoEnvio = $("input[type='radio'][name='rdo-modal-notification']:checked").val();
+            __removeUsuariosSelected();
+
+            if (tipoEnvio === 'MODULO') {
+                $('#div-tipo-notificacion').show();
+                $('#div-usuarios-modulo').hide();
+                $('#div-select-usuarios').hide();
+
+                $.ajax({
+                    type: 'GET',
+                    url: UrlApp + '/api/Notificaciones/GetTiposNotificaciones',
+                    dataType: 'json',
+                    success: function (response) {
+                        var data = [];
+                        var tiposNotificaciones = response;
+
+                        for (var i = 0; i < tiposNotificaciones.length; i++) {
+                            data.push({
+                                id: tiposNotificaciones[i].Tipo_Notificacion_ID,
+                                text: tiposNotificaciones[i].Nombre
+                            });
+                        }
+                        
+                        $('#cbo-tipo-notificacion').select2({
+                            language: "es",
+                            theme: "classic",
+                            templateSelection: function (item) {
+                                return item.text;
+                            },
+                            placeholder: 'Seleccione',
+                            allowClear: false,
+                            selectOnClose: true,
+                            multiple: false,
+                            data: data,
+                            maximumSelectionLength: 2
+                        });
+
+                        $('#cbo-tipo-notificacion').val('').trigger('change');
+
+                        $('#tbl-usuarios').bootstrapTable('destroy');
+                        $('#tbl-usuarios').bootstrapTable({
+                            cache: false,
+                            striped: true,
+                            pagination: true,
+                            data: [],
+                            pageSize: 10,
+                            pageList: [10, 25, 50, 100, 200],
+                            smartDysplay: false,
+                            search: false,
+                            showColumns: false,
+                            showRefresh: false,
+                            minimumCountColumns: 2,
+                            columns: [
+                                { field: 'Nombre', title: 'Nombre', align: 'left', valign: 'middle', sortable: true },
+                                { field: 'Usuario', title: 'Usuario', align: 'left', valign: 'middle', sortable: true },
+                                { field: 'Email', title: 'Email', align: 'left', valign: 'middle', sortable: true },
+                                {
+                                    field: 'Usuario_ID',
+                                    title: 'Quitar',
+                                    align: 'center',
+                                    valign: 'middle',
+                                    width: 60,
+                                    clickToSelect: false,
+                                    formatter: function (value, row) {
+                                        return '<div>' +
+                                            '<span class="fa fa-times remove-usuario-modulo" id="spn-remove-usuario-modulo-' + row.Usuario_ID + '" style="color:red; cursor:pointer;"></span>' +
+                                            '</div>';
+                                    }
+                                }
+                            ]
+                        });
+                    },
+                    error: function () {
+
+                    }
+                });
+            } else if (tipoEnvio === 'USUARIO') {
+                $('#div-tipo-notificacion').hide();
+                $('#div-usuarios-modulo').hide();
+                $('#div-select-usuarios').show();
+                __fillComboUsuarios();
+            }
+        });
+
+        $('#cbo-tipo-notificacion').on('change', function (e) {
+            e.preventDefault();
+            //e.stopImmediatePropagation();
+            var moduloId = $('#cbo-tipo-notificacion').val();
+
+            if (moduloId !== '') {
+                $('#div-usuarios-modulo').show();
+                $('#div-select-usuarios').hide();
+                __fillDataTable(moduloId);
+                if (usuariosSelected.length > 0) {
+                    $('#btn-reiniciar-usuarios-modulo').show();
+                    $('#btn-success-modal-notification').removeProp('disabled');
+                } else {
+                    $('#btn-reiniciar-usuarios-modulo').hide();
+                    $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+                }
+            } else {
+                $('#div-usuarios-modulo').hide();
+                $('#btn-reiniciar-usuarios-modulo').hide();
+                $('#div-select-usuarios').hide();
+            }
+        });
+
+        $('#cbo-usuarios').on('change', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var usuario = $('#cbo-usuarios').val();
+            if (usuario !== '') {
+                var usuarioSelected = {};
+
+                for (var i = 0; i < usuarios.length; i++) {
+                    if (parseInt(usuario) === usuarios[i].Usuario_ID) {
+                        usuarioSelected = usuarios[i];
+                        break;
+                    }
+                }
+
+                if (usuarioSelected !== undefined && usuarioSelected !== null && usuarioSelected !== '' && usuarioSelected !== {} && usuarioSelected.Usuario_ID !== undefined) {
+                    var isAdded = false;
+
+                    for (var j = 0; j < usuariosSelected.length; j++) {
+                        if (usuarioSelected.Usuario_ID === usuariosSelected[j].Usuario_ID) {
+                            isAdded = true;
+                            break;
+                        }
+                    }
+
+                    if (!isAdded) {
+                        usuariosSelected.push(usuarioSelected);
+                        $('#div-tags-usuarios').append('<div id="div-tag-usuario-' + usuarioSelected.Usuario_ID + '" class="tag">' + usuarioSelected.Nombre + '&nbsp;<span class="fa fa-times"></span></div>');
+
+                        if (usuariosSelected.length === 0) {
+                            $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+                        } else {
+                            $('#btn-success-modal-notification').removeProp('disabled');
+                        }
+                    }
+                }
+
+                $('#cbo-usuarios').val(null).trigger('change.select2');
+            }
+        });
+
+        $('#div-tags-usuarios').on('click', '.tag', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var id = e.currentTarget.id;
+            $('#' + id).remove();
+            var usuarioId = parseInt(id.split('div-tag-usuario-')[1]);
+            usuariosSelected = usuariosSelected.filter(function (x) { return x.Usuario_ID !== usuarioId; }); 
+
+            if (usuariosSelected.length === 0) {
+                $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+            } else {
+                $('#btn-success-modal-notification').removeProp('disabled');
+            }
+        });
+
+        $('#tbl-usuarios').on('click', '.remove-usuario-modulo', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var id = e.currentTarget.id;
+            $('#' + id).remove();
+            var usuarioId = parseInt(id.split('spn-remove-usuario-modulo-')[1]);
+            usuariosSelected = usuariosSelected.filter(function (x) { return x.Usuario_ID !== usuarioId; });
+
+            if (usuariosSelected.length === 0) {
+                $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+            } else {
+                $('#btn-success-modal-notification').removeProp('disabled');
+            }
+
+            $('#tbl-usuarios').bootstrapTable('load', usuariosSelected);
+        });
+
+        $('#btn-reiniciar-usuarios-modulo').on('click', function (e) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+            var moduloId = $('#cbo-tipo-notificacion').val();
+            __fillDataTable(moduloId);
+        });
+
+        function __closeModalNotification() {
+            __removeUsuariosSelected();
+            $('#div-modal-notification').modal('hide');
+            $('#div-modal').empty();
+            $('#div-modal-notification').remove();
+        }
+
+        function __removeUsuariosSelected() {
+            usuariosSelected = [];
+            $('#div-tags-usuarios').empty();
+            $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+        }
+
+        function __fillComboUsuarios() {
+            $.ajax({
+                type: 'GET',
+                url: UrlApp + '/api/Notificaciones/GetUsuarios',
+                dataType: 'json',
+                success: function (response) {
+                    var data = [];
+                    usuarios = response;
+                    var usuariosResponse = response;
+
+                    data.push({ id: '', text: '' });
+
+                    for (var i = 0; i < usuariosResponse.length; i++) {
+                        data.push({
+                            id: usuariosResponse[i].Usuario_ID,
+                            text: usuariosResponse[i].Nombre
+                        });
+                    }
+
+                    $('#cbo-usuarios').select2({
+                        language: "es",
+                        theme: "classic",
+                        placeholder: 'Seleccione',
+                        allowClear: false,
+                        selectOnClose: true,
+                        data: data
+                    });
+
+                    $('#cbo-usuarios').val(null).trigger('change.select2');
+                },
+                error: function () {
+
+                }
+            });
+        }
+
+        function __fillDataTable(moduloId) {
+            if (moduloId !== undefined && moduloId !== null && moduloId !== '') {
+                $.ajax({
+                    type: 'GET',
+                    url: UrlApp + '/api/Notificaciones/GetUsuarios?moduloId=' + moduloId,
+                    dataType: 'json',
+                    success: function (response) {
+                        usuariosSelected = response;
+                        if (usuariosSelected.length === 0) {
+                            $('#btn-success-modal-notification').prop({ 'disabled': 'disabled' });
+                            $('#btn-reiniciar-usuarios-modulo').hide();
+                        } else {
+                            $('#btn-success-modal-notification').removeProp('disabled');
+                            $('#btn-reiniciar-usuarios-modulo').show();
+                        }
+                        $('#tbl-usuarios').bootstrapTable('load', response);
+                    },
+                    error: function () {
+
+                    }
+                });
+            }
+        }
+    };
+}(jQuery));

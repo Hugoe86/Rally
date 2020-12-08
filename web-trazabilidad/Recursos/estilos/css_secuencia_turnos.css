@@ -1,0 +1,32 @@
+﻿@media only screen and (max-width: 500px) {
+    #div_contenedor_dias {
+        margin-left: 0px !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #div_contenedor_dias {
+        margin-left: 5px !important;
+    }
+}
+
+.back_color_par {
+    background-color: white;
+}
+
+.back_color_impar {
+    background-color: rgba(208, 229, 245, 0.50);
+}
+
+
+@media only screen and (max-width: 500px) {
+    .formato_etiqueta {
+     margin-top: initial !important;   
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .formato_etiqueta {
+        margin-top: 15px !important;
+    }
+}

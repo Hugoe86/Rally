@@ -1,0 +1,58 @@
+﻿
+<div style="height:100vh !important; width:100% !important;" class="container">
+    <div class="panel panel-color panel-info" id="panel1" style="margin-bottom:5px !important">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+            </h3>
+            <div class="panel-options">
+                <a href="#" data-toggle="panel">
+                    <span class="collapse-icon">–</span>
+                    <span class="expand-icon">+</span>
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+
+
+                <div class="col-md-6">
+                    <label class="fuente_lbl_controles">(*) Evento</label>
+                    <select id="cmb_evento_filtro" style="width:100%"></select>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="fuente_lbl_controles">(*) Jornada</label>
+                    <select id="cmb_jornada_filtro" style="width:100%" disabled></select>
+                </div>
+
+              
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                </div>
+
+                <div class="col-md-4" style="padding-top:10px;">
+                    <button type="button" id="btn_busqueda" class="btn btn-info btn-block" title="Buscar"><i class="fa fa-search">&nbsp;Buscar</i></button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="toolbar" style="margin-left: 5px;margin-top: 10px;">
+
+        <div class="btn-group" role="group" style="margin-left: 5px;">
+            <button id="btn_inicio" type="button" class="btn btn-info btn-sm" title="Inicio"><i class="glyphicon glyphicon-home"></i></button>
+
+            <button id="btn_exportar_pdf" type="button" class="btn btn-info btn-sm" style="border-radius: 0px !important;" title="Exportar PDF"><i class="fa-file-pdf-o"></i></button>
+            <button id="btn_exportar_excel" type="button" class="btn btn-info btn-sm " style="border-radius: 0px !important;" title="Exportar Excel"><i class="fa-file-excel-o" ></i></button>
+            
+        </div>
+    </div>
+
+    <table id="tbl_reporte_etapas" data-toolbar="#toolbar" data-toolbar-align="right" class="table table-responsive"></table>
+</div>
+

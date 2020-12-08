@@ -1,0 +1,79 @@
+﻿
+<div style="height:100vh !important; width:100% !important;" class="container">
+    <div class="panel panel-color panel-info" id="panel1" style="margin-bottom:5px !important">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+            </h3>
+            <div class="panel-options">
+                <a href="#" data-toggle="panel">
+                    <span class="collapse-icon">–</span>
+                    <span class="expand-icon">+</span>
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">(*) Evento</label>
+                    <select id="cmb_evento_filtro" style="width:100%"></select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">(*) Jornada</label>
+                    <select id="cmb_jornada_filtro" style="width:100%"></select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">(*) Punto de Control</label>
+                    <select id="cmb_puntos_filtro" style="width:100%"></select>
+                </div>
+
+
+            </div>
+
+            <div class="row" style="padding-top:10px;">
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Responsable</label>
+                    <input id="txt_responsable_filtro" type="text" class="form-control" placeholder="Responsable" style="margin-top:0px;" disabled="disabled">
+                </div>
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Ubicaci&oacute;n</label>
+                    <input id="txt_ubicacion_filtro" type="text" class="form-control" placeholder="Ubicación" style="margin-top:0px;" disabled="disabled">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Tiempo ideal</label>
+                    <input id="txt_tiempo_ideal_filtro" type="text" class="form-control" placeholder="Tiempo ideal" style="margin-top:0px;" disabled="disabled">
+                </div>
+
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Tiempo entre carros</label>
+                    <input id="txt_tiempo_carros_filtro" type="text" class="form-control" placeholder="Tiempo entre carros" style="margin-top:0px;" disabled="disabled">
+                </div>
+
+            </div>
+
+            <div class="row" style="padding-top:10px;">
+                <div class="col-md-8">
+                </div>
+
+                <div class="col-md-4">
+                    <button type="button" id="btn_busqueda" class="btn btn-info btn-block" title="Buscar"><i class="fa fa-search">&nbsp;Buscar</i></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="toolbar" style="margin-left: 5px;margin-top: 10px;">
+        <div class="btn-group" role="group" style="margin-left: 5px;">
+
+            <button id="btn_inicio" type="button" class="btn btn-info btn-sm" title="Inicio"><i class="glyphicon glyphicon-home"></i></button>
+            <button id="btn_exportar_pdf" type="button" class="btn btn-info btn-sm" style="border-radius: 0px !important;" title="Exportar PDF"><i class="fa-file-pdf-o"></i></button>
+            <button id="btn_exportar_excel" type="button" class="btn btn-info btn-sm " style="border-radius: 0px !important;" title="Exportar Excel"><i class="fa-file-excel-o"></i></button>
+        </div>
+    </div>
+    <table id="tbl_puntos" data-toolbar="#toolbar" class="table table-responsive"></table>
+</div>
+

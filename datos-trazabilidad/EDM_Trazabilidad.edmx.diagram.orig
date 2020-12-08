@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9d84b9a8001f47569499ac4372a617ed" Name="Diagram1" ZoomLevel="50">
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Accesos" Width="1.5" PointX="5.25" PointY="45" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Avisos" Width="1.5" PointX="2.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Cat_Bancos" Width="1.5" PointX="27.5" PointY="43.25" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Cat_Metodo_Pago" Width="1.5" PointX="4.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Cat_Parametros" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Cat_Tipo_Movimiento" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Empresas" Width="1.5" PointX="8" PointY="41" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Entidades_Empresas" Width="1.5" PointX="5.75" PointY="49.625" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Menus" Width="1.5" PointX="3" PointY="44.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Menus_Empresa" Width="1.5" PointX="10.25" PointY="45.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Modulos" Width="1.5" PointX="0.75" PointY="41.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Niveles" Width="1.5" PointX="11" PointY="41.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Notificaciones" Width="1.5" PointX="21.5" PointY="49.625" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Parametros_Facturas" Width="1.5" PointX="29.75" PointY="41.375" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Pos_Accesos" Width="1.5" PointX="18.5" PointY="44.375" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Rel_Usuarios_Roles" Width="1.5" PointX="21.5" PointY="45.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Roles" Width="1.5" PointX="13.25" PointY="44.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Roles_Sucursales" Width="1.5" PointX="18.5" PointY="97.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Sucursales" Width="1.5" PointX="16.25" PointY="42.625" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Tipos_Usuarios" Width="1.5" PointX="22.25" PointY="32.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Usuarios" Width="1.5" PointX="24.5" PointY="36.625" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Usuarios_Notificaciones" Width="1.5" PointX="32.75" PointY="43.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Apl_Usuarios_Password" Width="1.5" PointX="18.5" PointY="94.375" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Centro_Costos" Width="1.5" PointX="26.75" PointY="51.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Clientes_Cuentas_Contables_CC" Width="1.5" PointX="32" PointY="40" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Cuentas_Contables" Width="1.5" PointX="24.5" PointY="44.125" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Cuentas_Contables_Sat" Width="1.5" PointX="24.5" PointY="51" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Impuestos_Cuentas_Contables_CC" Width="1.5" PointX="35" PointY="41.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Con_Niveles" Width="1.5" PointX="21.5" PointY="35.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Ciudades" Width="1.5" PointX="5.75" PointY="53.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Codigos_Postales" Width="1.5" PointX="5.75" PointY="58" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Departamentos" Width="1.5" PointX="18.5" PointY="50.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Estados" Width="1.5" PointX="1.25" PointY="53.125" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Localidades" Width="1.5" PointX="5.75" PointY="38.375" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Municipios_Localidades" Width="1.5" PointX="3.5" PointY="53.25" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Paises" Width="1.5" PointX="1.25" PointY="58.25" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Nom_Regimen_Fiscal" Width="1.5" PointX="18.5" PointY="38.625" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Participantes" Width="1.5" PointX="5.75" PointY="1" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Participantes_Adjuntos" Width="1.5" PointX="8" PointY="1.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Procesos_Sistema" Width="1.5" PointX="24.5" PointY="32.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Rel_Usuarios_Procesos_Sistema" Width="1.5" PointX="26.75" PointY="38.5" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Responsables" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Sat_Bancos" Width="1.5" PointX="25.25" PointY="57.375" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Tipos_Notificaciones" Width="1.5" PointX="19.25" PointY="55.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Vehiculos" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Vehiculos_Documentos" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Ope_Con_Cuentas_Contables_Centro_Costo" Width="1.5" PointX="29.75" PointY="34.75" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Sys_Accesos" Width="1.5" PointX="16.25" PointY="37.875" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Tra_Cat_Config_Items_Table_Show" Width="1.5" PointX="21.5" PointY="41.25" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Tra_Cat_Estatus" Width="1.5" PointX="0.75" PointY="45.5" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ACCESO_CAT_MENUS1" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ACCESO_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkBancoSat" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkCCBancos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkCCBancosProveedor" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursalBancos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_Empresas_APL_ENTIDAD_EMPRESA" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ROLES_APL_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_Sucursales_APL_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_USUARIOS_APL_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_AplNotificacionesEmpresaIDEmpresa" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Ciudad_ID_Apl_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_ConfigItemsShowEmpresa" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Empresa_CC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Empresa_CC_SAT" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Empresa_ID" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Empresa_Impuesto_CCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_EmpresaRegimenFiscalIDEmpresa" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Localidad_ID_Apl_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Municipio_Localidad_ID_Apl_Empresas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Tra_Cat_Empresas_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkEmpresa_Niveles_Con" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkEmpresaCentroCostos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkEmpresaDepartamentos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkEmpresasCentroCostos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fkey_Cliente_Codigo_Postal2" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fkey_Cliente_Estado2" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fkey_Cliente_Pais2" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkPosAccesosEmp" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.pk_empresaId_parametroFactura" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_CAT_MENUS_APL_CAT_MODULOS" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_CAT_MENUS_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Menu_ID" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ROLES_APL_Niveles" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_AplNotificacionesSucursalIDSucursal" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_AplNotificacionesUsuarioReaUsuarios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_AplUsuNotificacionesNotificacion_IDNotif" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Tipo_Notificacion_ID_Apl_Notificaciones" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fkey_Empresa_Regimen_Fiscal" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkPosAccesosRol" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkPosAccesosSuc" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkPosAccesosSysAcceso" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Apl_Rel_Usuarios_Roles_Apl_Roles" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Apl_Rel_Usuarios_Roles_Apl_Sucursales" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_SucursalIdUsuarioRol" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkUsuarioRoleConfig" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ROLES_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_SucursalIdRoles" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_ROLES_SUCURSALES_APL_Sucursales" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_Sucursales_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_ConfigItemsShowSuc" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Sucursal_CC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Sucursal_CC_SAT" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_SucursalIdUP" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fk_SucursalIdUsuarios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_SucursalRegimenFiscalIDSucursal" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursal_Niveles_Con" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursalCCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursalCentroCostos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursalDepartamentos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkSucursalesCentroCostos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Apl_Usuarios_Apl_Tipo_Usuarios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_APL_USUARIOS_Tra_Cat_Estatus" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_AplUsuaNotificacionesUsuarioIDUsuarios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_RelUsuProcUsuarioIDUsuarios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.CCCCFKCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkDepartamentosCentroCostos" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_CCCC_Cliente_CCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_CC_Padre" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_CC_SAT_CC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_Niveles_CC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkCCCCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_IA_CCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_IPA_CCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_IPT_CCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_IT_CCCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.fkCCCCNivelCC" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Municipio_Localidad_ID_Cat_Nom_Ciudades" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_CP_Municipios" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_EstadoCodigo_Postal_IDEstados" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Localidad_ID_Cat_Nom_Codigos_Postales" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Estado_ID_Cat_Nom_Municipios_Localidades" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.Fk_Estado_Localidad" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_PaisIDPaises" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Cat_Participantes_Adjuntos_Cat_Participantes" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_RelUsuProcProcesoIDProcesosSistemas" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Cat_Vehiculos_Documentos_Cat_Vehiculos" />
+<<<<<<< HEAD
+=======
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Participantes" Width="1.5" PointX="5.375" PointY="8" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Participantes_Adjuntos" Width="1.5" PointX="7.625" PointY="8.875" />
+        <AssociationConnector Association="Sistema_TrazabilidadModel.FK_Cat_Participantes_Adjuntos_Cat_Participantes" />
+        <EntityTypeShape EntityType="Sistema_TrazabilidadModel.Cat_Responsables" Width="1.5" PointX="8.375" PointY="0.75" />
+>>>>>>> 9686705c78d28c385f4b71f32853f1fa0fac4662
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

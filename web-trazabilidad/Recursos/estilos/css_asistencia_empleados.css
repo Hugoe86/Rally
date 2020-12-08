@@ -1,0 +1,59 @@
+﻿@media only screen and (max-width: 500px) {
+    #btn_nuevo {
+        margin-top: 0px !important;
+    }
+
+    #Fila2 {
+        margin-top: 0px !important;
+    }
+
+    #Fila1NA {
+        margin-top: 0px !important;
+    }
+
+    #Fila2NA {
+        margin-top: 0px !important;
+    }
+
+    .balanceo {
+        margin-top: 0px !important;
+    }
+
+    #btn_buscar_registros {
+        margin-top: 0px !important;
+    }
+
+    #btn_exportar_excel_asistencia {
+        margin-top: 0px !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #btn_nuevo {
+        margin-top: 18px !important;
+    }
+
+    #Fila2 {
+        margin-top: 20px !important;
+    }
+
+    #Fila1NA {
+        margin-top: 10px !important;
+    }
+
+    #Fila2NA {
+        margin-top: 10px !important;
+    }
+
+    .balanceo {
+        margin-top: 6px !important;
+    }
+
+    #btn_buscar_registros {
+        margin-top: 18px !important;
+    }
+
+    #btn_exportar_excel_asistencia {
+        margin-top: 18px !important;
+    }
+}

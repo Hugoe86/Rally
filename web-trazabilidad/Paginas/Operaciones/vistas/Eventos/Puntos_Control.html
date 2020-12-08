@@ -1,0 +1,322 @@
+﻿
+
+<div style="height:80vh !important; width:100% !important;" class="container">
+
+    <div class="row" style="color: #40bbea; margin-top: 8px; margin-bottom: 8px">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5" style="text-align: right">
+
+            <button id="btn_guardar_punto_control" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i>&nbsp;Guardar punto de control</button>
+            <button id="btn_cancelar_punto_Control" type="button" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_punto_control_jornada" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-puzzle-piece text-info" style="font-size:16px;">&nbsp;Jornada</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+
+                            <label class="fuente_lbl_controles">(*) Clave</label>
+                            <input id="txt_clave_jornada_pnt" type="text" class="form-control" placeholder="Clave" style="margin-top:0px" maxlength="20" disabled="disabled" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Nombre</label>
+
+                            <input id="txt_nombre_jornada_pnt" type="text" class="form-control" placeholder="Nombre" style="margin-top:0px" maxlength="100" disabled="disabled" />
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_punto_control_datos" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-tachometer text-info" style="font-size:16px;">&nbsp;Puntos de control</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_jornada_punto_control_id" type="hidden" />
+                            <input id="txt_punto_control_id" type="hidden" />
+
+                            <label class="fuente_lbl_controles">(*) Clave</label>
+                            <input id="txt_clave_punto_control" type="text" class="form-control" placeholder="Clave" style="margin-top:0px" maxlength="15" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Numero</label>
+
+                            <input id="txt_numero_punto_control" type="text" class="form-control" placeholder="Numero" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_punto_control">
+                                <input type="text" id="txt_fecha_punto_control"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" disabled="disabled" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+
+                            <label class="fuente_lbl_controles">(*) Hora inicio</label>
+
+                            <div class="input-group date" id="dtp_hora_inicio_punto_control">
+                                <input type="text" id="txt_hora_inicio_punto_control"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Hora termino</label>
+
+
+                            <div class="input-group date" id="dtp_hora_termino_punto_control">
+                                <input type="text" id="txt_hora_termino_punto_control"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <!--<div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Tiempo ideal</label>
+
+
+                            <div class="input-group date" id="dtp_tiempo_ideal_punto_control">
+                                <input type="text" id="txt_tiempo_ideal_punto_control"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+
+                            </div>
+
+                        </div>-->
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="row" style="padding-top:10px; ">
+                        <div class="col-md-12">
+
+                            <label class="fuente_lbl_controles">(*) Ubicacion</label>
+                            <input id="txt_ubicacion_punto_control" type="text" class="form-control" placeholder="Ubicacion" style="margin-top:0px" maxlength="255" />
+                        </div>
+
+
+                      
+
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-3">
+
+                            <label class="fuente_lbl_controles">(*) Renglon</label>
+                            <input id="txt_renglon_punto_control" type="text" class="form-control" placeholder="Renglon" style="margin-top:0px" maxlength="50" />
+                        </div>
+
+
+                        <div class="col-md-3">
+
+                            <label class="fuente_lbl_controles">(*) Distancia</label>
+                            <input id="txt_distancia_punto_control" type="text" class="form-control" placeholder="Distancia" style="margin-top:0px" maxlength="50" />
+                        </div>
+
+                        <div class="col-md-3">
+
+                            <label class="fuente_lbl_controles">(*) Seña</label>
+                            <input id="txt_senia_punto_control" type="text" class="form-control" placeholder="Seña" style="margin-top:0px" maxlength="50" />
+                        </div>
+
+                        <!--<div class="col-md-3">
+                            <label class="fuente_lbl_controles">(*) Intervalo entre carros</label>
+
+                            <input type="text" id="txt_intervalo_carros_punto_control"
+                                   class="form-control" style="margin: 0px;" placeholder="total de segundos" />
+                        </div>-->
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <!-- Asignacion del tiempo ideal de la categoria -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_punto_control_datos" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-user text-info" style="font-size:16px;">&nbsp;Asignar tiempo ideal a la categoria</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-5">
+
+                            <label class="fuente_lbl_controles">(*) Tiempo Ideal</label>
+
+                            <div class="input-group date" id="dtp_txt_tiempo_ideal_categoria">
+                                <input type="text" id="txt_tiempo_ideal_categoria"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm:ss" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        
+                        <div class="col-md-5">
+                            <label class="fuente_lbl_controles">(*) Categoria</label>
+                            <select id="cmb_categoria_tiempo_ideal" style="width:100%" class="form-control"></select>
+                        </div>
+
+                        <div class="col-md-2">
+                            <button id="btn_agregar_tiempo_ideal_Categ" class="btn btn-blue btn-block"
+                                    title="Agregar">
+                                <i class="fa fa-check"></i><span id="spn_agregar">&nbsp;Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                   
+                    <!-- --------------------------------------------------------------- -->
+                    <br />
+                    <div class="row" style="padding-top:10px;">
+                        <table id="tbl_categoria_tiempo_ideal" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="row" style="padding-top:10px;display:none;">
+                        <table id="tbl_categoria_tiempo_ideal_eliminar" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_punto_control_datos" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-user text-info" style="font-size:16px;">&nbsp;Asignar equipo operadores</span>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+
+                            <label class="fuente_lbl_controles">(*) Hora llegada</label>
+
+                            <div class="input-group date" id="dtp_txt_hora_llegada_operador">
+                                <input type="text" id="txt_hora_llegada_operador"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Hora salida</label>
+
+                            <div class="input-group date" id="dtp_txt_hora_salida_operador">
+                                <input type="text" id="txt_hora_salida_operador"
+                                       class="form-control" style="margin: 0px;" placeholder="hh:mm" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-time"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Cargo</label>
+                            <select id="cmb_cargo_operador_responsable" style="width:100%" class="form-control"></select>
+                        </div>
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-8">
+                            <label class="fuente_lbl_controles">(*) Operador</label>
+                            <select id="cmb_operador_responsable" style="width:100%" class="form-control"></select>
+                        </div>
+
+                        <div class="col-md-2">
+                        </div>
+
+                        <div class="col-md-2">
+                            <button id="btn_agregar_operador_responsable" class="btn btn-blue btn-block"
+                                    title="Agregar">
+                                <i class="fa fa-check"></i><span id="spn_agregar">&nbsp;Agregar</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <br />
+                    <div class="row" style="padding-top:10px;">
+                        <table id="tbl_operadores_responsables" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div class="row" style="padding-top:10px;display:none;">
+                        <table id="tbl_operadores_responsables_eliminar" class="table table-responsive"></table>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+

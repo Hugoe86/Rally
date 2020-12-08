@@ -1,0 +1,465 @@
+﻿/* ---- button ---- */
+
+.button {
+    display: inline-block;
+    padding: 0.5em 1.0em;
+    background: #EEE;
+    border: none;
+    border-radius: 7px;
+    background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.2) );
+    color: #222;
+    font-family: sans-serif;
+    font-size: 16px;
+    text-shadow: 0 1px white;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #8CF;
+        text-shadow: 0 1px hsla(0, 0%, 100%, 0.5);
+        color: #222;
+    }
+
+    .button:active,
+    .button.is-checked {
+        background-color: #28F;
+    }
+
+    .button.is-checked {
+        color: white;
+        text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+    }
+
+    .button:active {
+        box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+    }
+
+/* ---- button-group ---- */
+
+.button-group {
+    margin-bottom: 20px;
+}
+
+    .button-group:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .button-group .button {
+        float: left;
+        border-radius: 0;
+        margin-left: 0;
+        margin-right: 1px;
+    }
+
+        .button-group .button:first-child {
+            border-radius: 0.5em 0 0 0.5em;
+        }
+
+        .button-group .button:last-child {
+            border-radius: 0 0.5em 0.5em 0;
+        }
+
+/* ---- isotope ---- */
+
+.grid {
+    border: dotted 0.1px #ccc;
+    margin-top: 5px;
+    height: 157px !important;
+    overflow: auto !important;
+}
+
+    /* clear fix */
+    .grid:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+
+    
+.grid_vehiculos {
+    /*border: dotted 0.1px #ccc;*/
+    margin-top: 5px;
+    height: 70px !important;
+}
+    /* clear fix */
+    .grid_vehiculos:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+/* ---- .element-item ---- */
+
+.element-item {
+    position: relative;
+    float: left;
+    width: 99%;
+    height: 150px;
+    margin: 5px;
+    padding: 10px;
+    background: #888;
+    color: #262524;
+    border: outset 3px #eeeef2;
+    border-radius: 4px;
+}
+
+    .element-item > * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .element-item .name {
+        position: relative;
+        left: 0px;
+        top: 25px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006100;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+
+    .element-item .name-a {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #808080;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+
+
+
+    .element-item .symbol {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #006100;
+        text-transform: uppercase;
+    }
+
+    .element-item .bom {
+        position: absolute;
+        left: 10px;
+        top: 47px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006100;
+        text-transform: uppercase;
+    }
+
+    .element-item .cant_necesaria {
+        position: absolute;
+        left: 10px;
+        top: 59px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006100;
+        text-transform: uppercase;
+    }
+
+    .element-item .ubicacion {
+        position: absolute;
+        left: 10px;
+        top: 71px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006100;
+        text-transform: uppercase;
+    }
+
+    .element-item .inventario {
+        position: absolute;
+        left: 10px;
+        top: 83px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006100;
+        text-transform: uppercase;
+    }
+
+    .element-item .link_ {
+        position: absolute;
+        left: 10px;
+        top: 99px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: #006100;
+    }
+
+    /*///////////////*/
+    .element-item .name-r {
+        position: relative;
+        left: 0px;
+        top: 25px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #9B0006;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-transform: uppercase;
+    }
+
+   
+
+
+    .element-item .symbol-r {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #9B0006;
+        text-transform: uppercase;
+    }
+
+    .element-item .symbol-nueva_produccion {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #808080;
+        text-transform: uppercase;
+    }
+     .element-item .symbol-participante {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #808080;
+        text-transform: uppercase;
+    }
+      .symbol-marca {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    .element-item .symbol-b {
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .element-item .bom-r {
+        position: absolute;
+        left: 10px;
+        top: 47px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #9B0006;
+        text-transform: uppercase;
+    }
+
+    .element-item .bom-b {
+        position: absolute;
+        left: 10px;
+        top: 47px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .element-item .cant_necesaria-r {
+        position: absolute;
+        left: 10px;
+        top: 59px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #9B0006;
+        text-transform: uppercase;
+    }
+
+    .element-item .cant_necesaria-b {
+        position: absolute;
+        left: 10px;
+        top: 59px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .element-item .ubicacion-r {
+        position: absolute;
+        left: 10px;
+        top: 71px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #9B0006;
+        text-transform: uppercase;
+    }
+
+
+    .element-item .ubicacion-b {
+        position: absolute;
+        left: 10px;
+        top: 71px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000;
+        text-transform: uppercase;
+    }
+
+    .element-item .inventario-r {
+        position: absolute;
+        left: 10px;
+        top: 83px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #9B0006 !important;
+        text-transform: uppercase;
+    }
+
+    .element-item .inventario-b {
+        position: absolute;
+        left: 10px;
+        top: 83px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #000000 !important;
+        text-transform: uppercase;
+    }
+
+    .element-item .link_r {
+        position: absolute;
+        left: 10px;
+        top: 99px;
+        text-transform: none;
+        letter-spacing: 0;
+        font-size: 12px;
+        font-weight: normal;
+        color: #9B0006;
+    }
+    /*//////////////*/
+
+    .element-item.alkali {
+        background: #F00;
+        background: hsl( 0, 100%, 50%);
+    }
+
+    .element-item.alkaline-earth {
+        background: #F80;
+        background: hsl( 36, 100%, 50%);
+    }
+
+    .element-item.lanthanoid {
+        background: #FF0;
+        background: hsl( 72, 100%, 50%);
+    }
+
+    .element-item.actinoid {
+        background: #0F0;
+        background: hsl( 108, 100%, 50%);
+    }
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+    .element-item.transition {
+        background: #C5EECD;
+        background: hsl( 132, 55%, 85%);
+    }
+
+    .element-item.transition-r {
+        background: hsl( 353, 97%, 89%);
+    }
+
+    .element-item.transition-y {
+        background: #F0E68C;
+        background: hsl( 54, 77%, 75%);
+    }
+
+    .element-item.transition-g {
+        background: #98FB98;
+        background: hsl( 120, 93%, 79%);
+    }
+
+
+    .element-item.post-transition {
+        background: #0FF;
+        background: hsl( 180, 100%, 50%);
+    }
+
+
+    .element-item.transition-info {
+        background: #CEE7FF;
+        background: hsl( 209, 100%, 90%);
+    }
+
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+    /*----------------------------------------------------------------------------------------------------------------------------------*/
+
+    .element-item.metalloid {
+        background: #08F;
+        background: hsl( 216, 100%, 50%);
+    }
+
+    .element-item.diatomic {
+        background: #00F;
+        background: hsl( 252, 100%, 50%);
+    }
+
+    .element-item.halogen {
+        background: #F0F;
+        background: hsl( 288, 100%, 50%);
+    }
+
+    .element-item.noble-gas {
+        background: #F08;
+        background: hsl( 324, 100%, 50%);
+    }

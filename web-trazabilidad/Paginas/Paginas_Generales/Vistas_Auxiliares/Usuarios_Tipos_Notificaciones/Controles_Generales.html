@@ -1,0 +1,38 @@
+﻿<div class="panel panel-color panel-info collapsed" id="panel1">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+        </h3>
+        <div class="panel-options">
+            <a href="#" data-toggle="panel">
+                <span class="collapse-icon">–</span>
+                <span class="expand-icon">+</span>
+            </a>
+        </div>
+    </div>
+    <div class="panel-body">
+
+        <div class="row">
+            <div class="col-md-2" style="margin-top: 8px;">
+                <label>Nombre</label>
+            </div>
+            <div class="col-md-3">
+                <input type="text" id="txt_busqueda_por_nombre" class="form-control" placeholder="Búsqueda por nombre de usuario" />
+            </div>
+            <div class="col-md-7" align="right">
+                <button type="button" id="btn_busqueda" class="btn btn-secondary btn-icon btn-icon-standalone btn-lg">
+                    <i class="fa fa-search"></i>
+                    <span>Buscar</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="toolbar" style="margin-left: 5px;">
+    <div class="btn-group" role="group" style="margin-left: 5px;">
+        <button id="btn_salir" type="button" class="btn btn-info btn-sm" title="Salir"><i class="glyphicon glyphicon-home"></i></button>
+        <button id="btn_nuevo" type="button" class="btn btn-info btn-sm" title="Nuevo"><i class="glyphicon glyphicon-plus"></i></button>
+        <button id="btn_exportar" type="button" class="btn btn-info btn-sm" title="Exportar Excel"><i class="fa fa-download"></i></button>
+    </div>
+</div>
+<table id="tbl_usuarios_tipos_notificaciones" data-toolbar="#toolbar" class="table table-responsive"></table>

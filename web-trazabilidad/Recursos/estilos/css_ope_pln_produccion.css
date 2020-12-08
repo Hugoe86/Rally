@@ -1,0 +1,51 @@
+﻿.etq {
+    padding-top: 3px !important;
+    font-weight: 800 !important;
+    background: linear-gradient(to bottom,#EFF5FF 0,#E0ECFF 100%);
+    background-repeat: repeat-x;
+    border-top: solid 0.1px #95B8E7;
+    border-left: solid 0.1px #95B8E7;
+    border-right: solid 0.1px #95B8E7;
+    min-height: 27px !important;
+    color: #0063B6;
+    font-weight: bold !important;
+}
+
+.etq-bottom {
+    border-bottom: solid 0.1px #95B8E7;
+}
+
+.ctrl {
+    background-color: rgba(243, 243, 246, 0.3);
+    min-height: 27px !important;
+    border-top-color: #ccc;
+    border-top-width: 0.1px;
+    border-top-style: dotted;
+    color: #006100;
+}
+
+.ctrl-right {
+    border-right-color: #ccc;
+    border-right-width: 0.1px;
+    border-right-style: dotted;
+}
+
+.ctrl-bottom {
+    border-bottom-color: #ccc;
+    border-bottom-width: 0.1px;
+    border-bottom-style: dotted;
+}
+
+.panel.panel-info .panel-heading {
+    background-color: #55acee;
+}
+
+.etq-barcode {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+}
+
+.alert-danger {
+    background: #FEC6CD;
+    background: hsl( 353, 97%, 89%);
+}

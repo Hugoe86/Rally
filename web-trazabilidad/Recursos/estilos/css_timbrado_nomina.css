@@ -1,0 +1,11 @@
+﻿@media only screen and (max-width: 500px) {
+    #btn_timbrar {
+        margin-top: initial !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #btn_timbrar {
+        margin-top: 20px !important;
+    }
+}

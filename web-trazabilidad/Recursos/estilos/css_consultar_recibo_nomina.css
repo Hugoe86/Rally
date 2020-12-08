@@ -1,0 +1,128 @@
+﻿.container-header-cr{
+    padding: 10px;
+
+    /*background: rgba(91,158,236,1);
+    background: -moz-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(91,158,236,1)), color-stop(15%, rgba(91,158,236,1)), color-stop(16%, rgba(91,158,236,1)), color-stop(56%, rgba(145,195,242,1)), color-stop(88%, rgba(91,158,236,1)), color-stop(100%, rgba(91,158,236,1)));
+    background: -webkit-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -o-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -ms-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: linear-gradient(to bottom, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b9eec', endColorstr='#5b9eec', GradientType=0 );*/
+
+background: rgb(226, 226, 226) !important;
+background: -moz-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,0.56) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(212,228,239,1)), color-stop(100%, rgba(134,174,204,0.56)));
+background: -webkit-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,0.56) 100%);
+background: -o-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,0.56) 100%);
+background: -ms-linear-gradient(top, rgba(212,228,239,1) 0%, rgba(134,174,204,0.56) 100%);
+background: linear-gradient(to bottom, rgba(212,228,239,1) 0%, rgba(134,174,204,0.56) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e4ef', endColorstr='#86aecc', GradientType=0 );
+
+    border-radius: 20px 20px 20px 20px;
+    -moz-border-radius: 20px 20px 20px 20px;
+    -webkit-border-radius: 20px 20px 20px 20px;
+    border: 0px solid #000000;
+}
+
+.title_1 {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+.title_2 {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0057ad;
+}
+
+.fuente-totales-recibo{
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+}
+
+.fuente_lbl_controles {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 12px;
+    font-weight: 400;
+    color: #000;
+}
+
+
+.container-conceptos{
+    /*border: solid 0.3px rgb(84, 164, 238);*/
+}
+
+.container-header-conceptos {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000;
+    padding: 10px 0px 10px 9px;
+
+    /*background: rgba(91,158,236,1);
+    background: -moz-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(91,158,236,1)), color-stop(15%, rgba(91,158,236,1)), color-stop(16%, rgba(91,158,236,1)), color-stop(56%, rgba(145,195,242,1)), color-stop(88%, rgba(91,158,236,1)), color-stop(100%, rgba(91,158,236,1)));
+    background: -webkit-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -o-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: -ms-linear-gradient(top, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    background: linear-gradient(to bottom, rgba(91,158,236,1) 0%, rgba(91,158,236,1) 15%, rgba(91,158,236,1) 16%, rgba(145,195,242,1) 56%, rgba(91,158,236,1) 88%, rgba(91,158,236,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5b9eec', endColorstr='#5b9eec', GradientType=0 );*/
+
+    background: rgba(226,226,226,1);
+background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+}
+
+.total_concepto {
+    font-family: 'Century Gothic' !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+}
+
+.total_concepto_lbl {
+    font-family: 'Century Gothic' !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: rgba(30, 30, 30, 1);
+}
+
+.bootstrap-table :not(.table-condensed).table, .bootstrap-table :not(.table-condensed).table > tbody > tr > th, .bootstrap-table :not(.table-condensed).table > tfoot > tr > th, .bootstrap-table :not(.table-condensed).table > thead > tr > td, .bootstrap-table :not(.table-condensed).table > tbody > tr > td, .bootstrap-table :not(.table-condensed).table > tfoot > tr > td {
+    cursor: pointer !important;
+}
+
+
+
+#tbl_recibos thead tr th {
+    background-color: #0a3d5f !important;
+    color: white !important;
+    padding: 3px 3px !important;
+}
+
+#tbl_recibos thead > tr > td, .table > thead > tr > th {
+    position: relative !important;
+    border-bottom: 1px solid #eeeeee !important;
+    color: #2c2e2f;
+}
+
+.lbl_fechas{
+    font-family: 'Century Gothic' !important;
+    font-size: large !important;
+    font-weight: bold !important;
+}
+
+.bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed) > tbody > tr > th, .bootstrap-table .table:not(.table-condensed) > tfoot > tr > th, .bootstrap-table .table:not(.table-condensed) > thead > tr > td, .bootstrap-table .table:not(.table-condensed) > tbody > tr > td, .bootstrap-table .table:not(.table-condensed) > tfoot > tr > td {
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+}

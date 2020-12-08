@@ -1,0 +1,58 @@
+﻿<div id="contenedor_contrles" style="background-color:white; width:100% !important;" class="container">
+
+    <div class="row" style="margin-top:30px !important">
+        <div class="col-md-12">
+            <h3 style="font-family: 'Roboto Light', cursive !important; font-size: 14px; font-weight: bold; color: #808080;margin-left:0px !important; margin-bottom:20px !important;">Ingresa los datos requeridos</h3>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <label class="fuente_lbl_controles">(*) Usuario</label>
+            <select id="cmb_usuario" name="cmb_usuario" class="form-control input-sm" disabled data-parsley-required="true" style="border-radius:inherit"></select>
+            <input type="hidden" id="txt_tipo_notificaciones_usuario_id" />
+        </div>
+        <div class="col-md-3">
+            <label class="fuente_lbl_controles">(*) Tipo Notificaci&oacute;n</label>
+            <select id="cmb_tipo_notificacion" name="cmb_tipo_notificacion" class="form-control input-sm" disabled data-parsley-required="true" style="border-radius:inherit"></select>
+        </div>
+        <div class="col-md-3" style="text-align:right!important;">
+            <input type="checkbox" id="chk_correo" name="chk_correo" disabled="disabled" style="margin-left:9px !important; margin-top:25px !important;"> Enviar Correo
+        </div>
+        <div class="col-md-3">
+            <label class="fuente_lbl_controles">(*) Correo</label>
+            <input type="text" id="txt_correo" name="txt_correo" class="form-control input-sm" disabled="disabled" placeholder="Correo" data-parsley-required="true" maxlength="100" required />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3">
+            <label class="fuente_lbl_controles">(*) Estatus</label>
+            <select id="cmb_estatus" name="cmb_estatus" class="form-control input-sm" disabled data-parsley-required="true" style="border-radius:inherit"></select>
+        </div>
+        <div class="col-md-9"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+            <div class="form-inline">
+                <button type="submit" class="btn btn-info btn-xs" id="btn_guardar_datos" title="Guardar"><i class="fa fa-check"></i><span>Aceptar</span></button>
+                <button type="button" class="btn btn-danger btn-xs cancelar" id="btn_cancelar" title="Cancelar operaci&oacute;n"><i class="glyphicon glyphicon-remove"></i><span>Cancelar</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" style="margin-top:30px !important;margin-bottom:30px !important">
+
+        <div class="col-md-9">
+            <div id="sumary_error" class="alert alert-danger text-left" style="width: 277.78px !important; display:none;">
+                <label id="lbl_msg_error" />
+            </div>
+        </div>
+
+    </div>
+
+    <br />
+
+</div>

@@ -1,0 +1,88 @@
+﻿
+
+<div style="height:50vh !important; width:100% !important;" class="container">
+    <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5" style="text-align:right">
+            <button id="btn_guardar_actividad" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+            <button id="btn_cancelar_actividad" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa fa-automobile"></span>&nbsp;Actividades
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                            <span class="collapse-icon">–</span>
+                            <span class="expand-icon">+</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_actividad_id" type="hidden" />
+
+                            <label class="fuente_lbl_controles">(*) Clave</label>
+                            <input id="txt_clave_actividad" type="text" class="form-control" placeholder="*Clave" style="margin-top:0px" maxlength="20" />
+                        </div>
+                        <div class="col-md-8">
+                            <label class="fuente_lbl_controles">(*) Nombre</label>
+                            <input id="txt_nombre_actividad" type="text" class="form-control" placeholder="*Nombre" style="margin-top:0px" maxlength="100" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha Inicio</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_inicio_actividad">
+                                <input type="text" id="txt_fecha_inicio_actividad"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha Fin</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_fin_actividad">
+                                <input type="text" id="txt_fecha_fin_actividad"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Estatus</label>
+                            <select id="cmb_estatus_actividad" class="form-control" style="width:100%;"></select>
+                        </div>
+                    </div>
+
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-12">
+                            <label class="fuente_lbl_controles">Comentarios</label>
+                            <input id="txt_comentarios_actividad" type="text" class="form-control" style="margin-top:0px" maxlength="200" multiple />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+

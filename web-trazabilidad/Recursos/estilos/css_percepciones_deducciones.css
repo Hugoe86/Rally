@@ -1,0 +1,92 @@
+﻿@media only screen and (max-width: 500px) {
+    .calculadora {
+        margin-top: 10px !important;
+        margin-left: 5px !important;
+        margin-bottom: 5px !important;
+        background-color: #00B0FF !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .calculadora {
+        margin-top: 22px !important;
+        background-color: #00B0FF !important;
+    }
+}
+
+#txt_formula_editable {
+    margin: 0px !important;
+    font-size: 100% !important;
+}
+
+#txt_formula_exento_editable {
+    margin: 0px !important;
+    font-size: 100% !important;
+}
+
+#txt_formula_gravable_editable {
+    margin: 0px !important;
+    font-size: 100% !important;
+}
+
+.edit:hover {
+    text-shadow: 1px 1px 1px #fff, 3px 3px 0px white !important;
+}
+
+@media only screen and (max-width: 500px) {
+    #btn_guardar_calendario {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    #btn_cancelar_calendario {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    #btn_periodos {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    #btn_guardar_periodo {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+
+    #btn_cancelar_periodo {
+        margin-top: 0px !important;
+        margin-left: 0px !important;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    #btn_guardar_calendario {
+        margin-top: 23px !important;
+        margin-left: 5px !important;
+    }
+
+    #btn_cancelar_calendario {
+        margin-top: 23px !important;
+        margin-left: 5px !important;
+    }
+
+    #btn_periodos {
+        margin-top: 23px !important;
+        margin-left: 5px !important;
+    }
+
+    #btn_guardar_periodo {
+        margin-top: 23px !important;
+        margin-left: 5px !important;
+    }
+
+    #btn_cancelar_periodo {
+        margin-top: 23px !important;
+        margin-left: 5px !important;
+    }
+}
+
+.delete:hover{
+    text-shadow:  1px 1px #fff, 3px 0px 5px white !important;
+}

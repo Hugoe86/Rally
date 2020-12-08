@@ -1,0 +1,237 @@
+﻿
+
+<div style="height:100vh !important; width:100% !important;" class="container">
+    <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-7">
+
+        </div>
+        <div class="col-md-5" style="text-align:right">
+            <button id="btn_guardar" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+            <button id="btn_cancelar" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa fa-automobile"></span>&nbsp;Veh&iacute;culos
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                            <span class="collapse-icon">–</span>
+                            <span class="expand-icon">+</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_vehiculo_id" type="hidden" />
+
+                            <label class="fuente_lbl_controles">Vehiculo (NS)</label>
+                            <input id="txt_ns" type="text" class="form-control" placeholder="NS" style="margin-top:0px" maxlength="25" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Año</label>
+                            <input id="txt_año" type="text" class="form-control" placeholder="Año" style="margin-top:0px" maxlength="4" />
+
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Marca</label>
+                            <input id="txt_marca" type="text" class="form-control" placeholder="Marca" style="margin-top:0px" maxlength="100" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Modelo</label>
+                            <input id="txt_modelo" type="text" class="form-control" placeholder="Modelo" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Placas</label>
+                            <input id="txt_placas" type="text" class="form-control" placeholder="Placas" style="margin-top:0px" maxlength="10" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="fuente_lbl_controles">(*) Color fondo app</label>
+                            <input type="color" id="txt_color_fondo" style="width:100%;" />
+                        </div>
+                        <div class="col-md-2">
+                            <label class="fuente_lbl_controles">(*) Color Automovil</label>
+                            <input type="color" id="txt_color" style="width:100%;" />
+                        </div>
+
+
+
+                    </div>
+
+
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Estatus</label>
+                            <select id="cmb_estatus" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="fuente_lbl_controles">Notas</label>
+                            <input type="text" id="txt_notas" class="form-control" placeholder="Notas" style="margin-top:0px" maxlength="255"  />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="glyphicon glyphicon-book"></span> &nbsp;Datos de seguro
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-3">
+                            <label class="fuente_lbl_controles">Compañia</label>
+                            <input id="txt_compañia" type="text" class="form-control" placeholder="Compañia" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="fuente_lbl_controles">N&uacute;mero de p&oacute;liza</label>
+                            <input id="txt_no_poliza" type="text" class="form-control" placeholder="No. Poliza" style="margin-top:0px" maxlength="50" />
+                        </div>
+                        <div class="col-md-3">
+                            <label class="fuente_lbl_controles">Vigencia desde</label>
+
+                            <div class="input-group date" id="dtp_txt_vigencia_inicial">
+                                <input type="text" id="txt_vigencia_inicial"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                        <div class="col-md-3">
+                            <label class="fuente_lbl_controles">Vigencia desde</label>
+
+                            <div class="input-group date" id="dtp_txt_vigencia_final">
+                                <input type="text" id="txt_vigencia_final"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_anexos" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i> <span class="glyphicon glyphicon-paperclip"></span> &nbsp;Domunetos adjuntos (imagenes)
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div id="panel_imagen" style="display: block">
+                        <div class="row">
+                            <div class="col-md-2">
+
+                                <label class="fuente_lbl_controles">Nombre</label>
+                                <input type="text" id="txt_nombre_documento" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+
+                                <label class="fuente_lbl_controles">Archivo</label>
+                                <input type="file" id="txt_ruta_imagen" class="form-control" />
+
+                            </div>
+                            <div class="col-md-2">
+                                <button id="btn_agregar_documento" class="btn btn-blue btn-block"
+                                        title="Agregar">
+                                    <i class="fa fa-check"></i><span id="spn_agregar">&nbsp;Agregar</span>
+                                </button>
+                            </div>
+
+                            <div class="col-md-5" style="">
+
+                                <div class="alert alert-warning text-center" role="alert">
+                                    <span class="glyphicon glyphicon-picture" style="color:black; font-size:14px;">&nbsp;vista preliminar</span>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- --------------------------------------------------------------- -->
+                <div class="row" style="padding-top:10px;">
+                    <div class="col-md-7">
+                        <table id="tbl_documentos" data-toolbar="#toolbar1" class="table table-responsive"></table>
+
+
+                    </div>
+                    <div class="col-md-5 text-center" style="">
+                        <div id="div_preliminar">
+                            <img src="no found" class="img-rounded" id="img_documento" alt="Ninguna imagen cargada" width="430" height="300" />
+                        </div>
+
+                    </div>
+
+                    <!-- --------------------------------------------------------------------------------------------------- -->
+                    <!-- --------------------------------------------------------------------------------------------------- -->
+                    <!-- no borrar -->
+                    <div class="row" style="padding-top:10px;display:none;">
+
+                        <table id="tbl_documentos_eliminados" data-toolbar="#toolbar2" class="table table-responsive"></table>
+
+                    </div>
+                    <!-- --------------------------------------------------------------------------------------------------- -->
+                    <!-- --------------------------------------------------------------------------------------------------- -->
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+

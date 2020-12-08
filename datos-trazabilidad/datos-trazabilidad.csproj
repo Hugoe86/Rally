@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82E5BAC7-8405-4941-A9E9-4371E609E5D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>datos_trazabilidad</RootNamespace>
+    <AssemblyName>datos-trazabilidad</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Apl_Accesos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Avisos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Cat_Bancos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Cat_Metodo_Pago.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Cat_Parametros.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Cat_Parametros_Eventos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Cat_Tipo_Movimiento.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Empresas.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Entidades_Empresas.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Menus.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Menus_Empresa.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Modulos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Niveles.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Notificaciones.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Parametros_Facturas.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Pos_Accesos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Rel_Usuarios_Roles.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Roles.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Roles_Sucursales.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Sucursales.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Tipos_Usuarios.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios_Notificaciones.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios_Password.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Centro_Costos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Clientes_Cuentas_Contables_CC.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Cuentas_Contables.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Cuentas_Contables_Sat.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Impuestos_Cuentas_Contables_CC.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Con_Niveles.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Ciudades.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Codigos_Postales.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Departamentos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Estados.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Localidades.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Municipios_Localidades.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Paises.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Nom_Regimen_Fiscal.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Participantes.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Participantes_Adjuntos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Procesos_Sistema.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Relacion_Participante_Vehiculo.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Rel_Usuarios_Procesos_Sistema.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Responsables.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Sat_Bancos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Tipos_Notificaciones.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Vehiculos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Vehiculos_Documentos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Consultar_Contenedores_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM_Trazabilidad.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDM_Trazabilidad.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM_Trazabilidad.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDM_Trazabilidad.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDM_Trazabilidad.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Email_Confirmation_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Empleado_Nombre_Password_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Get_User_Login_Data_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Nombre_Rol_Empleado_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Con_Cuentas_Contables_Centro_Costo.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Actividades.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Categorias.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Horas_Zero.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Horas_ZeroTmp.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Jornadas.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Pnt_Ctrl_Categ_Tiempos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Pnt_Ctrl_Operador.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Puntos_Control.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Redes_Sociales.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Registro_Tiempo.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Registro_TiempoTmp.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Registro_Tiempo_Backup.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Sincronizacion.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Eventos_Vehiculo_Participante.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Retrieve_User_Account_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Menus_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Select_Submenus_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SP_ConsultarProductosUbicacion_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Contenedores_Transferencia_Inventario_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Detalles_Solicitud_Surtido1_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Detalles_Solicitud_Surtido_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Detalles_Solicitud_Surtido_Result1.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Detalles_Solicitud_Surtido_Result2.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consultar_Detalles_Solicitud_Surtido_Result3.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_Consulta_Recepcion_Material_Pendiente_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagramdefinition_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_helpdiagrams_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_verificar_reabastecimiento1_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_verificar_reabastecimiento_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sys_Accesos.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tra_Cat_Config_Items_Table_Show.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tra_Cat_Estatus.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User_Retrieve_Data_Token_Result.cs">
+      <DependentUpon>EDM_Trazabilidad.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="EDM_Trazabilidad.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EDM_Trazabilidad.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EDM_Trazabilidad.edmx.diagram">
+      <DependentUpon>EDM_Trazabilidad.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EDM_Trazabilidad.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDM_Trazabilidad.edmx</DependentUpon>
+      <LastGenOutput>EDM_Trazabilidad.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EDM_Trazabilidad.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDM_Trazabilidad.edmx</DependentUpon>
+      <LastGenOutput>EDM_Trazabilidad.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

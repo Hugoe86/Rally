@@ -1,0 +1,168 @@
+﻿
+
+<div style="height:100vh !important; width:100% !important;" class="container">
+    <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-7">
+
+        </div>
+        <div class="col-md-5" style="text-align:right">
+            <button id="btn_guardar" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+            <button id="btn_cancelar" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Datos del Participantes
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                            <span class="collapse-icon">–</span>
+                            <span class="expand-icon">+</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_participante_id" type="hidden" />
+                            <label class="fuente_lbl_controles">Clave Participante</label>
+                            <input id="txt_clave" type="text" class="form-control" placeholder="*Clave" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-md-8">
+                            <label class="fuente_lbl_controles">(*) Nombre Participante</label>
+                            <input id="txt_nombre" type="text" class="form-control" placeholder="*Nombre Participante" style="margin-top:0px" maxlength="100" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Correo Electrónico</label>
+                            <input id="txt_email" type="text" class="form-control" placeholder="*Correo Electrónico" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Teléfono</label>
+                            <input id="txt_telefono" type="text" class="form-control" placeholder="*Teléfono" style="margin-top:0px" maxlength="20" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Estatus</label>
+                            <select id="cmb_estatus" style="width:100%" class="form-control"></select>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-sm-6">
+                            <label class="fuente_lbl_controles">Telefono Celular</label>
+                            <input id="txt_celular" type="text" class="form-control" placeholder="Teléfono Celular" style="margin-top:0px" maxlength="20" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="fuente_lbl_controles">Fecha de Nacimiento</label>
+                            <div class="input-group date" id="dtp_txt_fecha_nacimiento">
+                                <input type="text" id="txt_fecha_nacimiento"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="fuente_lbl_controles">(*) Sexo</label>
+                            <select id="cmb_sexo" style="width:100%" class="form-control"></select>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-sm-6">
+                            <label class="fuente_lbl_controles">Dirección</label>
+                            <input id="txt_direccion" type="text" class="form-control" placeholder="Dirección" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="fuente_lbl_controles">Colonia</label>
+                            <input id="txt_colonia" type="text" class="form-control" placeholder="Colonia" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="fuente_lbl_controles">Nacionalidad</label>
+                            <input id="txt_nacionalidad" type="text" class="form-control" placeholder="Nacionalidad" style="margin-top:0px" maxlength="50" />
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-sm-12">
+                            <label class="fuente_lbl_controles">Notas</label>
+                            <input type="text" id="txt_notas" class="form-control" placeholder="Notas" style="margin-top:0px" maxlength="255" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row" style="padding-top:25px;">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_anexos" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Domunetos adjuntos
+                    </h3>
+                    <div class="panel-options">
+                        <a href="#" data-toggle="panel">
+                            <span class="collapse-icon">–</span>
+                            <span class="expand-icon">+</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+
+                    <div id="panel_imagen" style="display: block">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label class="fuente_lbl_controles">Nombre</label>
+                                <input type="text" id="txt_nombre_documento" class="form-control" />
+                            </div>
+                            <div class="col-md-3">
+                                <div class="input-grouP">
+                                    <div class="input-group-prepend">
+                                        <span class="glyphicon glyphicon-paperclip"></span>
+                                    </div>
+                                    <input type="file" id="txt_ruta_imagen" class="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <button id="btn_agregar_documento" class="btn btn-blue btn-block"
+                                        title="Agregar">
+                                    <i class="fa fa-check"></i><span id="spn_agregar">&nbsp;Agregar</span>
+                                </button>
+                            </div>
+                            <div class="col-md-5" style="">
+                                <div class="alert alert-warning text-center" role="alert">
+                                    <span class="glyphicon glyphicon-camera" style="color:black; font-size:14px;">&nbsp;vista preliminar</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-7">
+                            <table id="tbl_documentos" data-toolbar="#toolbar1" class="table table-responsive"></table>
+                        </div>
+                        <div class="col-md-5">
+                            <div id="div_preliminar">
+                                <img src="no found" class="img-rounded" id="img_documento" alt="Ninguna imagen cargada" width="430" height="300" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top:10px;display:none;">
+                        <table id="tbl_documentos_eliminados" data-toolbar="#toolbar2" class="table table-responsive"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

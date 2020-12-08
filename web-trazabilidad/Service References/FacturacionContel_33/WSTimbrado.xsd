@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://wstimbradopruebas.facturaxion.com/WSTimbrado.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" />
+  <xs:element name="TimbrarObjeto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="parametrosEntradaWSTimbrado" nillable="true" type="q1:ParametrosEntradaWSTimbrado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimbrarObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="TimbrarObjetoResult" nillable="true" type="q2:ParametrosSalidaWSTimbrado" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimbrarParametros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMLPreCFDI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMLOpcionales" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdAddenda" type="xs:int" />
+        <xs:element minOccurs="0" name="NodoAddenda" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdLlaveUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="UUIDSucursal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MailCC" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MailCCO" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TimbrarParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TimbrarParametrosResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="XMLCFDI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RutaPDF" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Validacion3B" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Sugerencias3B" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarParametros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="RFCEmisor" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelarParametrosResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarObjeto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="parametrosEntradaWSCancelacion" nillable="true" type="q3:ParametrosEntradaWSCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelarObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="CancelarObjetoResult" nillable="true" type="q4:ParametrosSalidaWSCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaCFDIObjeto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="parametrosEntradaRecuperacionCFDI" nillable="true" type="q5:ParametrosEntradaRecuperacionCFDI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaCFDIObjetoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="RecuperaCFDIObjetoResult" nillable="true" type="q6:ParametrosSalidaRecuperacionCFDI" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaCFDIParametros">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XMLPreCFDI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaCFDIParametrosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RecuperaCFDIParametrosResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="XMLCFDI" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="EstatusCFDI" type="xs:int" />
+        <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaAcuseCancelacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="parametrosEntradaRecuperacionAcuseCancelacion" nillable="true" type="q7:ParametrosEntradaRecuperacionAcuseCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RecuperaAcuseCancelacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" minOccurs="0" name="RecuperaAcuseCancelacionResult" nillable="true" type="q8:ParametrosSalidaRecuperacionAcuseCancelacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaRFCSAT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Rfc" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidaRFCSATResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ValidaRFCSATResult" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

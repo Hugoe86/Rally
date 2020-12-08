@@ -1,0 +1,96 @@
+﻿
+
+<div style="height:50vh !important; width:100% !important;" class="container">
+
+    <div class="row" style="color: #40bbea; margin-top: 8px; margin-bottom: 8px">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5" style="text-align: right">
+
+            <button id="btn_guardar_jornada" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i>&nbsp;Guardar jornada</button>
+            <button id="btn_cancelar_jornada" type="button" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_jornada_operacion" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="glyphicon glyphicon-flag"></span>&nbsp;Datos de la jornada
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <input id="txt_jornada_id" type="hidden" />
+
+                            <label class="fuente_lbl_controles">(*) Clave</label>
+                            <input id="txt_clave_jornada" type="text" class="form-control" placeholder="Clave" style="margin-top:0px" maxlength="20" disabled="disabled" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Nombre</label>
+
+                            <input id="txt_nombre_jornada" type="text" class="form-control" placeholder="Nombre" style="margin-top:0px" maxlength="100" />
+
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Tipo</label>
+                            <select id="cmb_tipo_jornada" style="width:100%" class="form-control"></select>
+                        </div>
+
+
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Punto inicio</label>
+                            <input id="txt_punto_inicio_jornada" type="text" class="form-control" placeholder="Punto inicio" style="margin-top:0px" maxlength="100" />
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Punto fin</label>
+                            <input id="txt_punto_fin_jornada" type="text" class="form-control" placeholder="Punto fin" style="margin-top:0px" maxlength="100" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Fecha inicio</label>
+
+                            <div class="input-group date" id="dtp_txt_fecha_inicio_jornada">
+                                <input type="text" id="txt_fecha_inicio_jornada"
+                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+
+
+                        <div class="col-md-12">
+                            <label class="fuente_lbl_controles">(*) Comentarios</label>
+                            <input id="txt_comentarios_jornada" type="text" class="form-control" placeholder="Comentarios" style="margin-top:0px" maxlength="255" />
+                        </div>
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+
+
+

@@ -1,0 +1,23 @@
+﻿.fa-4x {
+    font-size: 4em !important;
+}
+
+.fix-form-control {
+    margin: 0px !important;
+}
+
+.login-container{
+    position: relative !important;
+    top: -50px !important;
+}
+
+.cerrar_popup_login{
+    display: inline; 
+    position: relative; 
+    right: 10px; 
+    top: 5px;
+}
+
+.a-popover-header-content{
+    font-size: 17px; 
+}

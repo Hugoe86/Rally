@@ -1,0 +1,18 @@
+﻿#contenedor_cargar_conceptos {
+    background-color: white !important;
+}
+
+#subir_archivo .form-control {
+    margin: 0px !important;
+    height: 31px !important;
+}
+
+.file-actions {
+    display: none;
+}
+
+@media only screen and (min-width: 500px) {
+    #btn_subir {
+        margin-top: 23px !important;
+    }
+}

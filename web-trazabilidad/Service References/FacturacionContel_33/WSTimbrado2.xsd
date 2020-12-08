@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ParametrosEntradaWSTimbrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdAddenda" type="xs:int" />
+      <xs:element minOccurs="0" name="IdLlaveUnico" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCCO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailPara" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NodoAddenda" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UUIDSucursal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLOpcionales" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLPreCFDI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaWSTimbrado" nillable="true" type="tns:ParametrosEntradaWSTimbrado" />
+  <xs:complexType name="ParametrosSalidaWSTimbrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstatusRespuesta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RutaPDF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Sugerencias3B" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Validacion3B" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLTimbrado" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosSalidaWSTimbrado" nillable="true" type="tns:ParametrosSalidaWSTimbrado" />
+  <xs:complexType name="ParametrosEntradaWSCancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RFCEmisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaWSCancelacion" nillable="true" type="tns:ParametrosEntradaWSCancelacion" />
+  <xs:complexType name="ParametrosSalidaWSCancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstatusRespuesta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosSalidaWSCancelacion" nillable="true" type="tns:ParametrosSalidaWSCancelacion" />
+  <xs:complexType name="ParametrosEntradaRecuperacionCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLPreCFDI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaRecuperacionCFDI" nillable="true" type="tns:ParametrosEntradaRecuperacionCFDI" />
+  <xs:complexType name="ParametrosSalidaRecuperacionCFDI">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstatusCFDI" type="xs:int" />
+      <xs:element minOccurs="0" name="EstatusRespuesta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLCFDI" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosSalidaRecuperacionCFDI" nillable="true" type="tns:ParametrosSalidaRecuperacionCFDI" />
+  <xs:complexType name="ParametrosEntradaRecuperacionAcuseCancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FolioFiscal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RFCEmisor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosEntradaRecuperacionAcuseCancelacion" nillable="true" type="tns:ParametrosEntradaRecuperacionAcuseCancelacion" />
+  <xs:complexType name="ParametrosSalidaRecuperacionAcuseCancelacion">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AcuseCancelacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EstatusRespuesta" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IdValidacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MensajeValidacion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParametrosSalidaRecuperacionAcuseCancelacion" nillable="true" type="tns:ParametrosSalidaRecuperacionAcuseCancelacion" />
+</xs:schema>

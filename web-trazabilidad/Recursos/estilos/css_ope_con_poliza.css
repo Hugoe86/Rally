@@ -1,0 +1,40 @@
+﻿        .input-group-addon {
+            height:28px!important;
+            background-color:white;
+            border:none;
+        }
+        p{margin-bottom:0px;}
+        hr{margin-top:0px;}
+        #Div_Totales
+        {
+            padding:2px 5px 2px 5px;
+            background-color:rgb(85,172,238);
+            margin:0px;
+        }
+        #Div_Totales_Ver
+        {
+            padding:2px 5px 2px 5px;
+            background-color:rgb(85,172,238);
+            margin:0px;
+        }
+        .form_control_tot
+        {
+            background: rgba(255, 255, 255, 0.10);border: 1px solid rgba(255, 255, 255, 0.15);color: #fff;
+        }
+
+
+#txt_documento_fuente div div div span {
+    color:red;
+
+}
+.file-preview-image div img{
+    width:160px !important;
+}
+
+.file-thumbnail-footer {
+    display: none
+}
+
+.input-group-btn {
+    padding: 5px;
+}

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WSTimbrado" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="BasicHttpsBinding_IWSTimbrado_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://wstimbradopruebas.facturaxion.com/WSTimbrado.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://wstimbradopruebas.facturaxion.com/WSTimbrado.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://wstimbradopruebas.facturaxion.com/WSTimbrado.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFWSTimbrado" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWSTimbrado_TimbrarObjeto_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimbrarObjeto" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_TimbrarObjeto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimbrarObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_TimbrarParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:TimbrarParametros" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_TimbrarParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TimbrarParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_CancelarParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarParametros" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_CancelarParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_CancelarObjeto_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarObjeto" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_CancelarObjeto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelarObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaCFDIObjeto_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaCFDIObjeto" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaCFDIObjeto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaCFDIObjetoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaCFDIParametros_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaCFDIParametros" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaCFDIParametros_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaCFDIParametrosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaAcuseCancelacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaAcuseCancelacion" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_RecuperaAcuseCancelacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RecuperaAcuseCancelacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_ValidaRFCSAT_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaRFCSAT" />
+  </wsdl:message>
+  <wsdl:message name="IWSTimbrado_ValidaRFCSAT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidaRFCSATResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWSTimbrado">
+    <wsdl:operation name="TimbrarObjeto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/TimbrarObjeto" message="tns:IWSTimbrado_TimbrarObjeto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/TimbrarObjetoResponse" message="tns:IWSTimbrado_TimbrarObjeto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TimbrarParametros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/TimbrarParametros" message="tns:IWSTimbrado_TimbrarParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/TimbrarParametrosResponse" message="tns:IWSTimbrado_TimbrarParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarParametros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/CancelarParametros" message="tns:IWSTimbrado_CancelarParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/CancelarParametrosResponse" message="tns:IWSTimbrado_CancelarParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelarObjeto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/CancelarObjeto" message="tns:IWSTimbrado_CancelarObjeto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/CancelarObjetoResponse" message="tns:IWSTimbrado_CancelarObjeto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaCFDIObjeto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaCFDIObjeto" message="tns:IWSTimbrado_RecuperaCFDIObjeto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaCFDIObjetoResponse" message="tns:IWSTimbrado_RecuperaCFDIObjeto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaCFDIParametros">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaCFDIParametros" message="tns:IWSTimbrado_RecuperaCFDIParametros_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaCFDIParametrosResponse" message="tns:IWSTimbrado_RecuperaCFDIParametros_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaAcuseCancelacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaAcuseCancelacion" message="tns:IWSTimbrado_RecuperaAcuseCancelacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/RecuperaAcuseCancelacionResponse" message="tns:IWSTimbrado_RecuperaAcuseCancelacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRFCSAT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWSTimbrado/ValidaRFCSAT" message="tns:IWSTimbrado_ValidaRFCSAT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWSTimbrado/ValidaRFCSATResponse" message="tns:IWSTimbrado_ValidaRFCSAT_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpsBinding_IWSTimbrado" type="tns:IWSTimbrado">
+    <wsp:PolicyReference URI="#BasicHttpsBinding_IWSTimbrado_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TimbrarObjeto">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/TimbrarObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TimbrarParametros">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/TimbrarParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarParametros">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/CancelarParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelarObjeto">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/CancelarObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaCFDIObjeto">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/RecuperaCFDIObjeto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaCFDIParametros">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/RecuperaCFDIParametros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RecuperaAcuseCancelacion">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/RecuperaAcuseCancelacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidaRFCSAT">
+      <soap:operation soapAction="http://tempuri.org/IWSTimbrado/ValidaRFCSAT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSTimbrado">
+    <wsdl:port name="BasicHttpsBinding_IWSTimbrado" binding="tns:BasicHttpsBinding_IWSTimbrado">
+      <soap:address location="https://wstimbradopruebas.facturaxion.com/WSTimbrado.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

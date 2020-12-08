@@ -1,0 +1,33 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <blockquote class="blockquote blockquote-info">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Modulo</label>
+                    <select id="cmb_tipo_notificacion" name="cmb_tipo_notificacion" class="form-control input-sm" data-parsley-required="true" style="border-radius:inherit"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Estatus</label>
+                    <select id="cmb_estatus" name="cmb_estatus" class="form-control input-sm" data-parsley-required="true" style="border-radius:inherit"></select>
+                </div>
+            </div>
+        </blockquote>
+    </div>
+</div>
+
+<br />
+    <!-- context menu -->
+<ul id="context-menu" class="dropdown-menu">
+    <li data-item="sin_leer"><a><i class="fa fa-eye-slash" aria-hidden="true"></i> Sin leer</a></li>
+</ul>
+
+<ul id="context-menu-visto" class="dropdown-menu">
+    <li data-item="leido"><a><i class="fa-eye" aria-hidden="true"></i> Le&iacute;do</a></li>
+</ul>
+
+<div class="row" id="contenedor_tabla">
+    <div class="col-md-12">
+        <table id="tbl_notificaciones" data-toolbar="#toolbar" class="table table-responsive"></table>
+    </div>
+</div>

@@ -1,0 +1,184 @@
+﻿
+
+<div style="height:50vh !important; width:100% !important;" class="container">
+
+    <div class="row" style="color: #40bbea; margin-top: 8px; margin-bottom: 8px">
+        <div class="col-md-7">
+        </div>
+        <div class="col-md-5" style="text-align: right">
+
+            <button id="btn_guardar_vehiculo" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i>&nbsp;Guardar vehiculo</button>
+            <button id="btn_cancelar_vehiculo" type="button" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_vehiculo_" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-car text-info" style="font-size:16px;">&nbsp;Datos del vehiculo</span>
+
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-12">
+                            <input id="txt_vehiculo_participante_id" type="hidden" />
+
+                            <label class="fuente_lbl_controles">(*) Marca/Modelo</label>
+                            <select id="cmb_vehiculo_id" style="width:100%" class="form-control"></select>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Categoria</label>
+                            <select id="cmb_categoria_id" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Categoria competencia</label>
+                            <select id="cmb_categoria_competencia_id" style="width:100%" class="form-control"></select>
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Numero de registro</label>
+                            <input id="txt_numero_registro" type="text" class="form-control" placeholder="Numero" style="margin-top:0px" maxlength="3" disabled/>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="fuente_lbl_controles">(*) Numero de participante</label>
+                            <input id="txt_numero_participante" type="text" class="form-control" placeholder="Numero" style="margin-top:0px" maxlength="3" />
+                        </div>
+                    </div>
+                    
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                            <div class="col-md-6">
+                                <label class="fuente_lbl_controles">(*) Color</label>
+                                <input type="color" id="txt_color" style="width:100%;" disabled="disabled" />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="fuente_lbl_controles">(*) Marca</label>
+                                <input id="txt_marca" type="text" class="form-control" placeholder="Marca" style="margin-top:0px" maxlength="100" disabled="disabled" />
+                            </div>
+                        </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Placas</label>
+                            <input id="txt_placas" type="text" class="form-control" placeholder="Placas" style="margin-top:0px" maxlength="10" disabled="disabled" />
+                        </div>
+
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Modelo</label>
+                            <input id="txt_modelo" type="text" class="form-control" placeholder="Modelo" style="margin-top:0px" maxlength="100" disabled="disabled" />
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Año</label>
+                            <input id="txt_año" type="text" class="form-control" placeholder="Año" style="margin-top:0px" maxlength="4" disabled="disabled" />
+                        </div>
+
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+
+                            <label class="fuente_lbl_controles">Revisión mecánica</label>
+                            <select id="cmb_revision_mecanica" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-8">
+                            <label class="fuente_lbl_controles">Comentarios</label>
+                            <input id="txt_comentarios_vehiculo" type="text" class="form-control" placeholder="Comentarios" style="margin-top:0px" maxlength="255" />
+
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_vehiculo_datos_piloto" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-male text-info" style="font-size:16px;">&nbsp;Datos del piloto</span>
+
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">(*) Nombre</label>
+                            <select id="cmb_piloto_id" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Revisión medica</label>
+                            <select id="cmb_revision_mecadica_piloto" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Comenarios</label>
+                            <input id="txt_comentarios_piloto" type="text" class="form-control" placeholder="Comentarios" style="margin-top:0px" maxlength="255" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-color panel-default" id="pnl_datos_vehiculo_datos_piloto" style="margin-bottom:10px !important">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: white;" class="glyphicon glyphicon-filter"></i><span class="fa-male text-info" style="font-size:16px;">&nbsp;Datos del copiloto</span>
+
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <!-- --------------------------------------------------------------- -->
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Nombre</label>
+                            <select id="cmb_copiloto_id" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Revisión medica</label>
+                            <select id="cmb_revision_mecadica_copiloto" style="width:100%" class="form-control"></select>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="fuente_lbl_controles">Comenarios</label>
+                            <input id="txt_comentarios_copiloto" type="text" class="form-control" placeholder="Comentarios" style="margin-top:0px" maxlength="255" />
+                        </div>
+                    </div>
+                    <!-- --------------------------------------------------------------- -->
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+

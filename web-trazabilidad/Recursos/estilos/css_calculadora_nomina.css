@@ -1,0 +1,147 @@
+﻿.panel_calculadora {
+    background: url(../img/fondo_calculadora.jpg) no-repeat;
+    background-size: cover;
+    margin-bottom: 30px !important;
+    padding: 50px !important;
+    padding-top: 30px !important;
+}
+
+.panel_calculadora input[type=text] {
+    background-color: transparent !important;
+    border: none !important;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(218, 229, 238, 0.75);
+    border-radius: 0px !important;
+    padding: 25px !important;
+    font-family: 'Century Gothic';
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-jahn {
+    color: #ffffff;
+    background-color: transparent;
+    border-color: transparent;
+    border-radius: 0px !important;
+    font-family: 'Roboto Regular' !important;
+    font-weight: 400;
+    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+    border: solid 0.9px #48c8b5;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+    .constantes .btn-jahn:hover {
+        box-shadow: 0px 0px 150px #000000;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.5);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.5);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.5);
+        transition: all 200ms ease-in;
+        transform: scale(1.5);
+        font-size: 6px !important;
+        text-align: center !important;
+        border-width: 0.02px !important;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1600px) {
+    .constantes .btn-jahn:hover {
+        box-shadow: 0px 0px 150px #000000;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.5);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.5);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.5);
+        transition: all 200ms ease-in;
+        transform: scale(1.5);
+        font-size: 6px !important;
+        text-align: center !important;
+        border-width: 0.02px !important;
+    }
+}
+
+@media screen and (min-width: 1601px) and (max-width: 3000px) {
+    .btn-jahn:not([title="Regresar"]):hover {
+        box-shadow: 0px 0px 20px #000000;
+        z-index: 2;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.1);
+        transition: all 200ms ease-in;
+        transform: scale(1.1);
+        font-size: 9px !important;
+        text-overflow: initial !important;
+        text-align: center !important;
+    }
+
+    [title="Regresar"]:hover {
+        color: #ffffff;
+        background-color: transparent !important;
+        border-color: rgba(218, 229, 238, 0.75);
+        -webkit-box-shadow: 0px 0px 1px 0px rgba(218, 229, 238, 0.75);
+    }
+}
+
+.btn-jahn:hover,
+.btn-jahn:focus,
+.btn-jahn:active,
+.btn-jahn.active,
+.open .dropdown-toggle.btn-jahn {
+    color: #ffffff;
+    background-color: transparent !important;
+    border-color: rgba(218, 229, 238, 0.75);
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(218, 229, 238, 0.75);
+}
+
+.btn-jahn:active,
+.btn-jahn.active,
+.open .dropdown-toggle.btn-jahn {
+    background-image: none;
+}
+
+.btn-jahn.disabled,
+.btn-jahn[disabled],
+fieldset[disabled] .btn-jahn,
+.btn-jahn.disabled:hover,
+.btn-jahn[disabled]:hover,
+fieldset[disabled] .btn-jahn:hover,
+.btn-jahn.disabled:focus,
+.btn-jahn[disabled]:focus,
+fieldset[disabled] .btn-jahn:focus,
+.btn-jahn.disabled:active,
+.btn-jahn[disabled]:active,
+fieldset[disabled] .btn-jahn:active,
+.btn-jahn.disabled.active,
+.btn-jahn[disabled].active,
+fieldset[disabled] .btn-jahn.active {
+    background-color: #611BBD;
+    border-color: #130269;
+}
+
+.btn-jahn .badge {
+    color: #611BBD;
+    background-color: #ffffff;
+}
+
+.title_calculadora {
+    font-family: 'Roboto Regular' !important;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.control_calculadora_condicion_formula {
+    font-size: 0.9em;
+}

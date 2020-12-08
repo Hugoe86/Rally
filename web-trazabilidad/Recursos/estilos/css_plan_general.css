@@ -1,0 +1,87 @@
+﻿.table_container {
+    border: 2px solid #0063B6;
+    text-align: center;
+    margin-top: 3px !important;
+    border-radius: 10px !important;
+    font-size: 9px;
+    word-break: normal;
+}
+
+
+
+    .table_container tr th {
+        background-color: #55ACEE !important;
+        color: white;
+        text-align: center;
+        padding: 3px;
+        border: 2px solid #0063B6 !important;
+    }
+
+.td-semanas {
+    background-color: #4E7895 !important;
+    border: 1px solid #0063B6;
+    color: white;
+    text-align: center;
+    padding: 3px;
+    vertical-align: middle;
+}
+
+.tr-dias-semanas {
+    background-color: #55ACEE;
+    color: white;
+    border: 2px solid #0063B6;
+    vertical-align: middle;
+    width:100px;
+}
+
+.td-dias-semanas {
+    width: 30px !important;
+    vertical-align: middle;
+    padding: 5px 10px 5px 10px
+}
+
+.td-division-proyectos {
+    border-right: 2px solid #0063B6 !important;
+    border-bottom: 2px solid #0063B6 !important;
+    vertical-align: middle !important;
+    padding: 5px 10px 5px 10px !important;
+}
+
+.td-division-bottom {
+    border-bottom: 2px solid #0063B6 !important;
+}
+
+.td-division-right {
+    border-right: 2px solid #0063B6 !important;
+    border-bottom: 1px solid #0063B6 !important;
+}
+
+.td-division-bottom-right {
+    border-right: 1px solid #0063B6 !important;
+    border-bottom: 2px solid #0063B6 !important;
+}
+.td-division-bottom-right2 {
+    border-right: 2px solid #0063B6 !important;
+    border-bottom: 2px solid #0063B6 !important;
+}
+.td-division-linea-right-bottom {
+    border-right: 1px solid #0063B6 !important;
+    border-bottom: 1px solid #0063B6 !important;
+    padding: 5px 10px 5px 10px !important;
+}
+
+.td-division-linea-right-bottom-green {
+    border-right: 1px solid #0063B6 !important;
+    border-bottom: 1px solid #0063B6 !important;
+    background-color: #91B23D;
+    color: white;
+    padding: 5px 10px 5px 10px !important;
+}
+
+.td-division-linea-right-bottom-green2 {
+    border-right: 2px solid #0063B6 !important;
+    border-bottom: 1px solid #0063B6 !important;
+    background-color: #91B23D;
+    color: white;
+    padding: 5px 10px 5px 10px !important;
+}
